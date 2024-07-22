@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+   <title>Document</title>
+   <style>
+      *,html{
+         padding: 0;
+         margin: 0;
+         box-sizing: border-box;
+      }
+      body{
+         width: 100%;
+         height: 100vh;
+          background:#aaa;
+          opacity: .8;
+      }
+      .conteiner{
+         width: 100%;
+         height: 100vh;
+        display: flex;
+         flex-direction:column;
+         align-items:center;
+         justify-content:center;
+      }
+      .img-box{
+         width: 23rem;
+         height: 23rem;
+         box-shadow: 0 0 1rem #23ff32;
+         border-radius: 50%;
+         overflow: hidden;
+            margin-bottom: 20px;
+      }
+      .img-box img{ 
+         width: 100%;
+         height: 100%;
+      }
+      .text-box{
+         margin-top: 20px;
+         width: 28rem;
+         font-size: 33px;
+         font-weight: 900;
+         text-align:center;
+      }
+      .musi{
+         box-shadow: 0 0 1rem #fff;
+         border-radius: 10px;
+         margin-top:10px;
+         background:#00ffff;
+         position: relative;
+         
+      }   
+      span:not(.line){
+         position: absolute;
+         width: 5px;
+         height: 5px;
+         top: 50px;
+         left: 10px;
+         border-radius: 50%;
+         background: #fff;
+         box-shadow:  0 0 1rem #fff;
+      }
+      span:nth-child(1){
+         left: 5%;
+         top: 15%;
+         animation-name: anim;
+         animation-duration: 10s;
+         animation-timing-function: ease-in-out;
+         animation-iteration-count: infinite;
+      }
+      span:nth-child(2){
+         left: 13%;
+         top: 65%;
+         animation: anim 20s ease-in-out 0s infinite;
+      }
+      span:nth-child(3){
+         left: 19%;
+         top: 1%;
+         animation: anim 5s ease-in-out 0s infinite;
+      }
+      span:nth-child(4){
+         left: 25%;
+         top: 5%;
+         animation: anim 27s ease-in-out 0s infinite;
+      }
+      span:nth-child(5){
+         left: 36%;
+         top: 34%;
+         animation: anim 22s ease-in-out 0s infinite;
+      }
+      span:nth-child(6){
+         left: 15%;
+         top: 85%;
+         animation: anim 4s ease-in-out 0s infinite;
+      }
+      span:nth-child(7){
+         left: 24%;
+         top: 40%;
+         animation: anim 13s ease-in-out 0s infinite;
+      }
+      span:nth-child(8){
+         left: 42%;
+         top: 52%;
+         animation: anim 19s ease-in-out 0s infinite;
+      }
+      span:nth-child(9){
+         left: 49%;
+         top: 12%;
+         animation: anim 20s ease-in-out 0s infinite;
+      }
+      span:nth-child(10){
+         left: 63%;
+         top: 23%;
+         animation: anim 5s ease-in-out 0s infinite;
+      }
+      span:nth-child(11){
+         left: 69%;
+         top: 10%;
+         animation: anim 9s ease-in-out 0s infinite;
+      }
+      span:nth-child(12){
+         left: 74%;
+         top: 35%;
+         animation: anim 12s ease-in-out 0s infinite;
+      }
+      span:nth-child(13){
+         left: 80%;
+         top: 15%;
+         animation: anim 12s ease-in-out 0s infinite;
+      }
+      span:nth-child(14){
+         left: 89%;
+         top: 35%;
+         animation: anim 27s ease-in-out 0s infinite;
+      }
+      @keyframes anim{
+         100%{
+            top: 99%;
+         }
+      }
+      
+      </style>
+</head>
+<body>
+   <div class="conteiner">
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+      <div class="img-box">
+         <img class="_img" src="krishn.jpg" alt="">
+      </div>
+      
+      <div class="text-box">
+         <p>મેહનત કરવામાં શરમ નો હોય વાલા બાકી સોનાની નગરી વાળા ને ક્યાં જરૂર હતી ગાયો ચરાવ વાની</p>
+      </div>
+       <audio class="music" src="AUD-20230802-WA0000.mp3" autoplay controls> Sorry your browser does not support embedding audios. </audio>
+
+      <p class="inta">Shialesh_04</p>
+   </div>
+</body>
+</html>

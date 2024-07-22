@@ -1,0 +1,114 @@
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  font-family: Sans-Serif;
+}
+html{
+  font-size: 10px;
+}
+
+/*=========haader========== */
+
+.header{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  padding: 2rem 9%;
+  top: 0;
+  left: 0;
+  position: fixed;
+}
+.header .header-logo{
+  font-size: 2rem;
+  color: #fff;
+  font-weight: 300;
+}
+.nav-bar{
+   position: absolute;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction: column;
+   gap: 15px;
+   background: linear-gradient(to right,#076d24aa,#53f180aa);
+   width: -0%;
+   font-size: 0;
+   height: 100vh;
+   right: 1rem;
+   top: 1rem;
+}
+#manu-btn{
+   font-size: 42px;
+   border: 1px solid #563476;
+   color: #fff;
+}
+.header .nav-bar a{
+  font-size: 1.6rem;
+  font-size: 22px;
+  color: #fff;
+  margin-left: 2rem;
+}
+
+/*===========* Home *======== */
+.home{
+  background-image: linear-gradient(to right,#076d24,#53f180);
+  display: flex;
+  width: 100%;
+  height: 100vh;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.home .home-contant{
+  padding: 0 3rem;
+  margin-left: 2rem;
+  color: #fff;
+}
+.home-contant h3{
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+.home-contant h2{
+  font-size: 1.4rem;
+  font-weight: 800;
+}
+.home-contant .home-logo{
+  font-size:10rem;
+  color: #fff;
+  margin-bottom: .2rem;
+}
+.home-contant p{
+  font-size: 1.4rem;
+}
+.home-contant .btn{
+  padding: 1rem;
+  margin:  2rem 2rem 1rem 0rem;
+  border-radius: 2rem;
+}
+
+.home .social-medea{
+  display: flex;
+  flex-direction: column;
+  padding-right: 2rem;
+  margin-left: 10rem;
+}
+.home .social-medea a{
+  font-size: 2rem;
+  color: #fff;
+  margin-bottom: 1rem;
+}
+
+
+.home .home-Image{
+  width: 40rem;
+  margin-right: 23rem;
+  height: 25rem;
+}
+.home .home-Image img{
+  width: 100%;
+  height: 100%;
+}

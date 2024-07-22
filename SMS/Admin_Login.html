@@ -1,0 +1,128 @@
+<html>
+  <head>
+    <title>Andim Login Form</title>
+    <style type="text/css">
+    
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box; ;
+        font-family: Arial Sans-Serif;
+      }
+      body{
+      width: 100%;
+      height: auto;
+      background-color: #feffef;
+      }
+      
+      
+      form{
+        display: grid;
+        background: blur(30px);
+        border: 3px solid #ff50e0;
+        padding: 30px;
+        width: 60%;
+        text-align: center;
+        border-radius: 30px 0px 30px 0px;
+        margin: 60px auto;
+        grid-template-columns:1fr 1fr;
+        grid-auto-rows: 60px;
+      }
+      form h1{
+        grid-column-start: span 2;
+        color: #ff50e0;
+      }
+      form .Un,.Ps{
+        margin:8px 0;
+        padding-left:10px ;
+        background-color:transparent;
+        outline: none;
+        border: 2px solid #ff50e0;
+        border-radius: 7px;
+        font-size: 18px;
+        grid-column-start: span 2;
+      }
+      form .Un,.Ps:focus{
+        border: 3px solid #ff50e0;
+      }
+      form .Btn{
+        width: 70%;
+        margin: 0 auto;
+        background-color: transparent;
+        border: 2px solid #ff50e0;
+        height: 50px;
+      }
+      .Link{
+        display: grid;
+        grid-template-columns:1fr 1fr;
+        margin:20px 0;
+      }
+      #Massage{
+        height: 17px;margin:20px 10px ;
+        color: red;
+        font-size: 17px;
+        font-weight: 10px;
+      }
+    </style>
+  </head>
+  <body id="BodyBg">
+    <div class="contnr">
+      <form action="AdminPase.html" onsubmit="return Passwd()">
+        <h1>LogIn</h1>
+        <input type="text" name="UserName" id="UName" class="Un"
+        placeholder="Here Type User Name">
+        <input type="password" name="Password" id="pass" class="Ps"
+        placeholder="Here Type Password">
+        <button class="Btn" type="submit" value="submit">LogIn</button>
+        <div class="Link">
+          <a class="Forget" href="#">Forget</a>
+          <a class="Hom" href="#">Go BAck(home)</a>
+        </div>
+        <p id="Massage"></p>
+      </form>
+    </div>
+    <script >
+      const grd = document.getElementById("BodyBg");
+      const min=1, max=255;
+      const Msg = document.getElementById("Massage");
+      function Passwd(){
+        const corectUserName = "Shailesh";
+        const corectPassword = "Shailesh04";
+        var Uname = document.getElementById("UName").value;
+        var Pass = document.getElementById("pass").value;
+        Msg.innerHTML = " " ;
+        //Condition For Cheack PassWord   
+      
+        if(Uname == corectUserName && Pass == corectPassword){
+          return true;
+        }
+        else{
+          Msg.innerHTML =" Incorect Password" ;
+          return false;
+        }
+      }//function
+      
+      grd.onclick = function(){
+        
+        var R = Math.floor(Math.random() * (max - min)) + min;
+        var G = Math.floor(Math.random() * (max - min)) + min;
+        var B = Math.floor(Math.random() * (max - min)) + min;
+        
+        var R1 = Math.floor(Math.random() * (max - min)) + min;
+        var G1 = Math.floor(Math.random() * (max - min)) + min;
+        var B1 = Math.floor(Math.random() * (max - min)) + min;
+        
+        var R2 = Math.floor(Math.random() * (max - min)) + min;
+        var G2 = Math.floor(Math.random() * (max - min)) + min;
+        var B2 = Math.floor(Math.random() * (max - min)) + min;
+        
+        var deg = Math.floor(Math.random() * (360 - min)) + min;
+        
+        var A = Math.floor(Math.random() * (1 - 0.5)) + 0.5;
+        var A1 = Math.floor(Math.random() * (1 - 0.5)) + 0.5;
+        var A2 = Math.floor(Math.random() * (1 - 0.5)) + 0.5;
+        grd.style.backgroundImage="linear-gradient("+deg+"deg,rgba("+R+","+G+","+B+","+A+"),rgba("+R1+","+G1+","+B1+","+A1+"),rgba("+R2+","+G2+","+B2+","+A2+")";
+      }
+   </script>
+  </body>
+</html>

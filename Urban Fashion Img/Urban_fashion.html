@@ -1,0 +1,122 @@
+<html>
+  <head>
+    <title>Urban Fashion</title>
+    <style type="text/css">
+      *{
+        box-sizing: border-box;
+        padding: 0;
+        margin: 0;
+        text-decoration: none;
+        overflow: none;
+      }
+      html{
+        font-size: 10px;
+      }
+      body{
+        width: 100%;
+      }
+      section{
+        background-image: url('images/background.png ');
+        background-size:cover ;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        overflow: hidden;
+      }
+      img{
+        width: 100%;
+        height: 100%;
+      }
+      .header{
+        width: 100%;
+        position: fixed;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 1.6rem 6%;
+      }
+      .header .logo{
+        width: 12rem;
+        height: 3.5rem;
+      }
+      .header .nav-bar{
+        margin-right:25rem ;
+      }
+      .header .nav-bar a{
+        color: #111;
+        margin-right: 5rem;
+        font-size: 1.3rem;
+      }
+      .header .cart{
+        width: 4rem;
+        height: 4rem;
+      }
+      .home-contant{
+        position: relative;
+        left: 13rem;
+        display: flex;
+        align-items: center;
+        padding: 3rem;
+      }
+      .home-contant .home-text button{
+        padding: 1rem;
+        margin-bottom:2rem  ;
+        border-radius: .5rem;
+        border: none;
+        box-shadow: 0  0 1rem #f160e1;
+        background-image: linear-gradient(45deg,#b260f1,#f160e1);
+      }
+      .home-contant .home-text h2{
+        font-size: 4rem;
+        font-weight: 400;
+      }
+      .home-contant .home-text p{
+        color: #444;
+        font: 16rem;
+      }
+      .home-contant .home-text img{
+        width: 3rem;
+        height: 3rem;
+        margin: 1rem 1rem 0 0;
+      }
+      
+      .home-img{
+        position: absolute;
+        right:10rem ;
+        top: 7rem;
+        width:45rem;
+        height:45rem;
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <header class="header">
+        <a class="logo" href="#"><img src="images/logo.png" alt="not Found"></a>
+        <nav class="nav-bar">
+          <a href="#Home">Home</a>
+          <a href="#About">About</a>
+          <a href="#Colection">Colection</a>
+          <a href="#Catagory">Catagory</a>
+        </nav>
+        <a href="#" class="cart"><img src="images/cart.png" alt="not found"></a>
+      </header>
+      
+      <div class="home-contant">
+        <div class="home-text">
+          <button>2020 Collections</button>
+          <h2>You shoula always<br> feel pretty</h2>
+          <p>Clothes that are sure to heat up your winter</p>
+          <img src="images/back-arrow.png" alt="not found">
+          <img src="images/next-arrow.png" alt="not found">
+        </div>
+      </div>
+      <div class="home-img">
+          <img src="images/img.png" alt="not found">
+      </div>
+    </section>
+  </body>
+</html>

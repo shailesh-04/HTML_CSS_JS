@@ -1,0 +1,234 @@
+<html>
+  <head>
+    <title>Jonh kandrin Of One Web Pase </title>
+<!-- =====Icon Link======== -->    
+
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+
+<!-- =======costom css Filr====== -->
+    <style type="text/css">
+    
+    *{
+      padding: 0;
+      margin: 0;
+      box-sizing:border-box;
+      border: none;
+      text-decoration: none;
+      outline: none;
+      font-family:Sans-Serif;
+    }
+    :root{
+      --bg-color:#242e31;
+      --text-color:#fff;
+      --main-color:#67ff54;
+    }
+    html{
+      scroll-behavior: smooth;
+      font-size: 10px;
+    }
+    body{
+      width: 100%;
+      background: var(--bg-color);
+    }
+    header{
+      width: 100%;
+      position: fixed;
+    }
+    .header{
+      padding:2rem 9%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .header h3{
+      color: var(--text-color);
+      font-size: 2rem;
+    }
+    .nav-bar a{
+      color: var(--text-color);
+      font-size: 1.8rem;
+      margin-left: 3rem;
+      transition: .6s;
+    }
+    .nav-bar a:hover,
+    .nav-bar .active{
+      color:var(--main-color);
+    }
+    
+/*=======Home======= */
+
+    span{
+      color: var(--main-color);
+    }
+    .home{
+      width: 100%;
+      height: 100vh;
+      padding: 2rem 9%;
+      background: var(--bg-color);
+      color: var(--text-color);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    .home div{
+      
+    }
+    .home-cont{
+       margin-bottom: -2rem; 
+    }
+    .home-cont h1{
+      font-size: 5.6rem;
+      font-weight: 800;
+    }
+    .home-cont h2{
+      font-size: 3rem;
+      font-weight: 600;
+    }
+    .home-cont p{
+      font-size: 1.6rem;
+      margin-top: 1.3rem;
+    }
+    
+    .home-img img{
+      height: 30rem;
+      width: 30rem;
+    }
+/* ======social-media=======var() */    
+    .social-media{
+      display: flex;
+      margin-top: 2rem;
+      gap: 3rem;
+      margin-bottom: 2rem;
+    }
+    .social-media a{
+      color: var(--main-color);
+      padding: .8rem;
+      border: 3px solid var(--main-color);
+      border-radius: 50%;
+      font-size: 2rem;
+      transition: 1s;
+    }
+    .social-media a:hover{
+      box-shadow: 0 0 1rem var(--main-color);
+      color: var(--bg-color);
+      background: var(--main-color);
+    }
+    
+/* ========button======== */
+    .btn{
+      padding: 1.1rem 1.4rem ;
+      font-size: 1.6rem;
+      font-weight: 500;
+      border-radius: 3rem;
+      color: var(--bg-color);
+      background: var(--main-color);
+      box-shadow: 0 0 1rem var(--main-color);
+      transition: .8s;
+    }
+    .btn:hover{
+      border: 2px solid var(--text-color);
+      color: var(--main-color);
+      background: var(--bg-color);
+      box-shadow: 0 0 0 var(--main-color);
+    }
+
+/* ========Home image========== */
+    .home-img{
+     margin-right: 5rem;   
+     height: 34rem;
+     border-bottom: 1.5rem solid var(--main-color);
+     border-right: 1.5rem solid var(--main-color);
+     box-shadow: 0 0 1rem var(--main-color);
+     border-radius: 30rem;
+     width: 50rem;
+     animation: myAnimation 10s linear 0s infinite;
+    }
+    .home-img img{
+      border-radius: 30rem;
+      width: 100%;
+      height: 100%;
+      
+    }
+    @keyframes myAnimation {
+    0%{
+      border-top: 1.5rem solid var(--main-color);
+      border-bottom: .1rem solid var(--main-color);
+      border-left: .1rem solid var(--main-color);
+      border-right: .1rem solid var(--main-color);
+    }
+    30%{
+       border-right: 1.5rem solid var(--main-color);
+       border-bottom: .1rem solid var(--main-color);
+       border-top: .1rem solid var(--main-color);
+       border-left: .1rem solid var(--main-color);
+    }
+    60%{
+       border-bottom: 1.5rem solid var(--main-color);
+       border-left: .1rem solid var(--main-color);
+       border-top: .1rem solid var(--main-color);
+       border-right: .1rem solid var(--main-color);
+    }
+    90%{
+       border-left: 1.5rem solid var(--main-color);
+       border-top: .1rem solid var(--main-color);
+       border-bottom: .1rem solid var(--main-color);
+       border-right: .1rem solid var(--main-color);
+    }
+    100%
+    {
+      border-top: 1.5rem solid var(--main-color);
+      border-bottom: .1rem solid var(--main-color);
+      border-left: .1rem solid var(--main-color);
+      border-right: .1rem solid var(--main-color);
+    }
+    </style>
+    
+    
+  </head>
+  <body>
+    <header class="header">
+      <h3 >portfolio</h3>
+      
+      <nav class="nav-bar">
+        <a href="#Home" class="active">Home</a>
+        <a href="#About">About</a>
+        <a href="#Service">Service</a>
+        <a href="#Portfolio">Portfolio</a>
+        <a href="#Contact">Contact</a>
+      </nav>
+    </header>
+    
+<!--============== Home============ -->
+    
+    <section class="home" id="Home">
+      
+      <div class="home-cont">
+        <h2>Hallow ,It's Me</h2> 
+        <h1 id="main_name" >Ajay Baraiya</h1>
+        <h2>And i'am a <span>YouTuber</span></h2>  
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium, ob autem repellat reiciendis ipsam perspiciatis.</p>
+        <div class="social-media">
+          <a href="#"><i class='bx bxl-instagram'></i></a>
+          <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+          <a href="#"><i class='bx bxl-youtube'></i></a>
+        </div>      
+        
+        <button class="btn" onclick="Check()">Change BG Imge</button>
+      </div>
+      <!------->
+      
+      <div class="home-img">
+        <img src="my-frd.jpeg" alt="">
+      </div>
+    </section>
+<!-- =========costom javascript code========== -->
+    <script type="text/javascript">
+      const Ajay = document.getElementById('main_name').value;
+      
+      function Check(){
+        alert(Ajay);
+      }
+    </script>
+    
+  </body>
+</html>

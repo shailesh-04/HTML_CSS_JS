@@ -1,0 +1,111 @@
+<html>
+  <head>
+    <title>Student Manegement System</title>
+       <link rel="stylesheet" type="text/css" href="S_M_S.css">
+  </head>
+  <body>
+    <header>
+      
+    </header>
+    <div class="nav-bar" id="nav">
+      <ul>
+        <li><a href="#">Student</a></li>
+        <li><a href="Admin_Login.html">Admin</a></li>
+        <li><a href="#Cont">Contak</a></li>
+        <li><a href="#Abou">About</a></li>
+        <li><a href="#Hom">Home</a></li>
+        <li><h1>Students Mange. System</h1></li>
+      </ul>
+    </div>
+    <main  id="Abou">
+      <div  class="main-contant" id="grd" onclick="getRandomInt(1, 255)">
+        <h2 >About Us</h2>
+        <div></div>
+        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Similique ab nobis sapiente deserunt voluptatum possimus totam, odio veniam. Molestias, libero ipsum eligendi dicta exercitationem aliquam impedit vitae quidem aperiam provident distinctio et dolores ad rerum animi nisi rem error repudiandae? Unde magnam, quisquam reiciendis sapiente ea consectetur minima, quidem, est culpa quasi labore sit! Illo nemo libero aspernatur, laboriosam, culpa nobis perferendis quod autem ipsa excepturi rem deserunt sequi, porro iure quia maiores vitae praesentium eaque sunt totam. Voluptate, adipisci expedita facilis est odit veniam deleniti cumque atque harum magnam tempora eligendi magni maxime alias temporibus, eum voluptas suscipit ipsa.</p>
+        <div></div>
+      </div>
+      <div class="Notice-con">
+        <h1>Notice</h1>
+        <table>
+          <tr>
+            <th>No.</th>
+            <th>Title</th>
+            <th>Massage</th>
+            <th>Samester</th>
+            <th>Date</th>
+          </tr>
+          <tr>
+            <td colspan="5">Not Avelable</td>
+          </tr>
+          <tr>
+            <td colspan="5">Not Avelable</td>
+          </tr>
+          <tr>
+            <td colspan="5">Not Avelable</td>
+          </tr>
+        </table>
+        
+      </div>
+    </main>
+    <div id="Cont" class="Con">
+      <h1>Contak</h1>
+      <div class="ftr_Contak">
+        <div>
+          <h2>Address</h2>
+          <div></div>
+          <p>890,Sector 62, Gyan Sarovar, GAIL Noida(Delhi/NCR)</p>
+        </div>
+        <div>
+          <h2>Phone</h2>
+          <div></div>
+          <p>+91 9054277612</p>
+        </div>
+        <div>
+          <h2>Email</h2>
+          <div></div>
+           <p>Shailesh_04@gmal.com</p>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer-body">
+         <div> Student Manegement System</div>
+         <div>
+            <p class="aboutP">Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi ipsam assumenda sed veniam sit! Sint at nam unde quis quibusdam.</p>
+            <ul>
+              <li><a href="#">Student</a></li>
+              <li><a href="#">Admin</a></li>
+              <li><a href="#Cont">Contak</a></li>
+              <li><a href="#Abou">About</a></li>
+              <li><a href="#Hom">Home</a></li>
+            </ul>
+         </div>
+      </div>
+      <div class="footer-copyright">
+         © Copyright goes here. 
+      </div>
+   </footer>
+   <script >
+      const grd = document.getElementById("grd");
+      function getRandomInt(min, max) {
+         var R = Math.floor(Math.random() * (max - min)) + min;
+         var G = Math.floor(Math.random() * (max - min)) + min;
+         var B = Math.floor(Math.random() * (max - min)) + min;
+         var R1 = Math.floor(Math.random() * (max - min)) + min;
+         var G1 = Math.floor(Math.random() * (max - min)) + min;
+         var B1 = Math.floor(Math.random() * (max - min)) + min;
+         var R2 = Math.floor(Math.random() * (max - min)) + min;
+         var G2 = Math.floor(Math.random() * (max - min)) + min;
+         var B2 = Math.floor(Math.random() * (max - min)) + min;
+         var deg = Math.floor(Math.random() * (360 - min)) + min;
+         grd.style.backgroundImage="linear-gradient("+deg+"deg,rgb("+R+","+G+","+B+"),rgb("+R1+","+G1+","+B1+"),rgb("+R2+","+G2+","+B2+")";
+      }
+      const nav1 = document.getElementById("nav");
+      function manu()
+      {
+        nav1.style.display="block";
+      }
+   </script>
+
+  </body>
+</html>

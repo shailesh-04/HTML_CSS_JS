@@ -1,0 +1,240 @@
+<html>
+  <head>
+    <title>Xypo OF Web Pase</title>
+<!-- ============Costom Css Code============ -->
+    <style rel="stylesheet" type="text/css">
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing:border-box;
+        font-family: Sans-Serif;
+        border: none;
+        text-decoration: none;
+        outline: none;
+      }
+      html{
+        font-size: 15px;
+        scroll-behavior: smoothm;
+      }
+      body{
+        width: 100%;
+        background: #fff;
+      }
+      .home{
+      background-image: url('images/background.png');
+      background-size: cover;
+      background-position: center;        
+      width: 100%;
+      height: 100vh;
+      }
+  /* -----hadder-----     */
+  
+    .hadder{
+      padding: 2rem 4% 2rem 6%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: transparent;
+    }
+    .hadder .hadder_logo{
+      width: 6rem; 
+      
+    }
+    .hadder .hadder_logo img{
+      width: 100%;
+    }
+    .side-nav-bar .nav-bar{
+      display: none;
+      position: fixed;
+      top: .5rem;
+      right: 0rem;
+      padding-top:4.5rem ;
+      padding-left: 2rem;
+      width: 20rem;
+      height: 100vh;
+      border-radius: .2rem;
+      z-index: 100;
+      gap: 4rem;
+      font-size: 1.6rem;
+      background:#f67c92 ;
+      flex-direction:column;
+      z-index: 10;
+      opacity: 0;
+      transition:all 1s ;
+    }
+    .nav-bar a{
+      color: #fff;
+    }
+    .side-nav-bar .nav-btn{
+      position: fixed;
+      right:4rem;
+      top: 3rem;
+      height: 4rem;
+      z-index: 12;
+      width: 4rem;
+      transition:all 1s ;
+    }
+    .side-nav-bar .nav-btn img{
+      width: 100%;
+      height: 100%;
+    }
+    #close-btn{
+      display: none;
+    }
+
+
+    .home-cont{
+      width: 29rem;
+      padding: 2rem;
+      display: flex;
+      flex-direction: column;
+      margin-top: 10rem;
+      margin-left: 7rem;
+
+    }
+    .home-cont h1{
+      font-size: 2.3rem;
+      font-weight: 600;
+      margin-bottom: 1.5rem;
+      line-height: 3rem;
+    }
+    .dot{
+        height: 1rem;
+        width: 1rem;
+        display: block;
+       background:#f67c92; 
+    }
+    .home-cont p{
+      margin: 1.5rem 0 1rem 0;
+      color: #808080;
+    }
+    .home-cont .btn{
+      width: 50%;
+      height: 4rem;
+      background: transparent;
+      border: .2rem solid #f67c92;
+      font-weight: 700;
+      box-shadow: 0 0 1rem #f67c92;
+      font-size: 1rem;
+      margin-bottom: 3.5rem;
+      transition: all .5s;
+    }
+    .home-cont .btn:hover{
+     background: #f67c92; 
+    }
+    .line1{
+      margin:1rem 0 0 0 ;
+      width: 100%;
+      height: .1rem;
+      background: #f67c92;
+    }
+    .line3{
+      margin:1rem 0 0 0;
+      width: 10%;
+      height: .2rem;
+      background: #f67c92;
+    }
+    .line2{
+      margin:1rem 0 0 0;
+      width: 50%;
+      height: .2rem;
+      background: #f67c92;
+    }
+    .social-medea{
+      display: flex;
+      padding: 15rem 0rem 0rem 1rem;
+      
+      flex-direction: column;
+      position: fixed;
+      top: 0;
+      left: 0;
+    }
+    .social-medea a{
+      width: 2rem;
+      margin:1rem 0;
+      height: 2rem;
+    }
+    .social-medea a img{
+      width: 100%;
+      height: 100%;
+    }
+    </style>
+    
+  </head>
+  <body>
+  <section class="home" id="Home"> 
+      
+      <div class="hadder">
+        <div class="hadder_logo">
+          <img src="images/logo.png" alt="Not Found">
+        </div>
+        <div class="side-nav-bar">
+          <nav class="nav-bar" id="nar-bar">
+            <a href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#Senvice">Senvice</a>
+            <a href="#Project">Project</a>
+            <a href="#Contact">Contact</a>
+          </nav>
+          <a class="nav-btn" id="menu-btn"  onclick="nav_bar_open()"><img src="images/menu.png" alt="Not Found"><a>
+          <a class="nav-btn" id="close-btn" onclick="nav_bar_close()"><img src="images/close.png" alt="Not Found"><a>
+        </div>
+      </div>
+      
+      
+      
+      <div class="home-cont">
+        <h1> The Purpose is to teach, bribg learning to people</h1>
+        
+      <span class="dot"></span>
+        
+    <p>There are many variations of passages of Lorem ipsum available, butthe majority have suffered alteration in some form, by injectedhumour, or randomised words which don't look even slightlybelievable.</p>
+        
+      <button class="btn">Read More</button>
+        <span class="dot"></span>
+        
+        
+        <span class="line1"></span>
+        <span class="line2"></span>
+        <span class="line3"></span>
+        
+      </div>
+      <div class="social-medea">
+        <a href="#"><img src="images/facebook.png" alt="Not Found"></a>
+        <a href="#"><img src="images/instagram.png" alt="Not Found"></a>
+        <a href="#"><img src="images/linkedin.png" alt="Not Found"></a>
+        <a href="#"><img src="images/twitter.png" alt="Not Found"></a>
+      </div>
+  </section>
+  
+  <!-- =========Costom Javascript Code======== -->
+  
+  <script type="text/Javascript">
+    const navBar = document.getElementById('nar-bar');
+    const menuBtn = document.getElementById('menu-btn');
+    const closeBtn = document.getElementById('close-btn');
+    
+    function nav_bar_open(){
+      navBar.style.display="flex";
+      menuBtn.style.display="none";
+      closeBtn.style.display="block";
+       var myTimeout = setTimeout(function() {
+        navBar.style.opacity=1;
+      }, 50);
+    } 
+    
+    function nav_bar_close(){
+      navBar.style.opacity=0;
+      
+       var myTimeout = setTimeout(function() {
+        navBar.style.display="none";
+        menuBtn.style.display="block";
+        closeBtn.style.display="none";
+      }, 800);
+      
+    }
+    
+  </script>
+  
+  </body>
+</html>

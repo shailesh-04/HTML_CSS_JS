@@ -1,0 +1,236 @@
+*{
+  padding: 0;
+  margin: 0;
+  outline: none;
+  border: none;
+  text-decoration: none;
+  box-sizing: border-box;
+  font-family: 'Belanosima', sans-serif;
+}
+:root{
+  --bg-color: #a517ba;
+  --s-bg-color:#5f1782;
+}
+html{
+  font-size: 10px;
+  scroll-behavior: smooth;
+}
+body{
+  width: 100%;
+}
+section{
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+img{
+  width: 100%;
+  height: 100%;
+}
+.mycolor{
+  color: red;
+  font-size: 3rem;
+}
+.home{
+  background-image: linear-gradient(to right, var(--bg-color),var(--s-bg-color));
+  height: 85vh;
+}
+.wavw1{
+  position: absolute;
+  bottom:-1rem;
+  left: 0;
+  max-width: 100%;
+  max-height: 10rem;
+}
+header{
+  width: 100%;
+  display: flex;
+  padding:1rem ;
+  position: fixed;
+  top: 0;
+  left: 0;
+  align-items: center;
+  justify-content: space-between;
+background-image: linear-gradient(to right, var(--bg-color),var(--s-bg-color));
+}
+nav a{
+  margin-right: 2rem;
+  color: #fff;
+  font-size: 1.5rem;
+}
+.logo{
+  width: 10rem;
+  height: 3rem;
+}
+.home .home-cont{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 4rem;
+}
+.home-cont .home-text{
+  margin-top: -5rem;
+  color: #fff;
+  font-size: 1.4rem;
+}
+.home-cont .home-text h2{
+  font-size: 3rem;
+  font-weight: 400;
+  margin-bottom: 2rem;
+}
+.home-cont .home-text p{
+  font-size: 1.3rem;
+  margin-bottom: 2rem;
+}
+.home-cont .home-text a{
+  color: #fff;
+}
+.home-cont .home-text .play{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+.home-cont .home-text a img{
+  width: 4rem;
+  height: 4rem;
+}
+
+.home-img{
+  width: 35%;
+  height: 35rem;
+}
+.service{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5rem;
+}
+.service > .btn{
+  padding: 1rem 3rem;
+  background-image: linear-gradient(to right, var(--bg-color),var(--s-bg-color));
+  border-radius: 2rem ;
+  color: #fff;
+}
+.service > .btn:hover{
+    box-shadow: 0 0 .5rem var(--bg-color),
+              0 0 .5rem var(--s-bg-color);
+}
+.service .contante{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+.hading h1{
+  font-size: 3rem;
+}
+.service .contante .contante-text{
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  justify-content: center;
+  align-items: center;
+  max-width: 20%;
+}
+.service .contante .servc-img{
+  width: 5rem;
+  height:  5rem;
+  margin-bottom: 1rem;
+}
+.service .contante h2{
+ font-size: 1.7rem; 
+ letter-spacing: .1rem;
+}
+.service .contante p{
+  font-size: 1.6rem;
+  color: #444;
+}
+.line {
+  max-width: 15rem;
+  margin: 0 auto;
+  height: .3rem;
+  background: #ac4af6;
+}
+.line > div{
+  position: relative;
+  top: -.2rem;
+  margin: 1rem auto;
+  max-width: 5rem;
+  height: .7rem;
+  background: #ac4af6;
+}
+
+  /*=== about=== */
+.about{
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 4rem;  
+}
+.about .about-contaner{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 80%;
+}
+.about .about-contaner > div{
+  width: 100%;
+}
+.about .about-contaner .abut-text{
+  font-size: 1.3rem;
+  line-height: 3rem;
+}
+.about .about-contaner .abut-text h1{
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+.about .about-contaner .abut-text ul li{
+  color: #888;
+}
+.about .about-contaner .about-img{
+  width: 90%;
+  height: 90%;
+}
+
+/*=== testimonials=== */
+.testimonials{
+  flex-direction: column;
+  gap: 5rem;
+}
+.testimonials > .testimonials-container{
+  display: flex;
+  justify-content: center;
+  line-height: 2rem;
+}
+.testimonials > .testimonials-container > div{
+  border-left: 3px solid var(--s-bg-color);
+  padding: 0 1rem;
+}
+.testimonials > .testimonials-container > div > .clint-box{
+  display: flex;
+  margin-left: 1.5rem;
+}
+.testimonials > .testimonials-container > div > .clint-box > div{
+  line-height: normal;
+}
+.testimonials > .testimonials-container > div > .clint-box > img{
+  width: 10%;
+  height: 10%;
+  border-radius: 10rem;
+  margin-right: 1.5rem ;
+}
+/* --------contact footr----- */
+.wavw2{
+  position: absolute;
+  bottom:-1rem;
+  left: 0;
+  max-width: 100%;
+  max-height: 10rem;
+}
+.contact{
+  flex-direction: column;
+}

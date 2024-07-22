@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Laravel</title>
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <style>
+          input[name='option']:checked ~ span{
+            background:#00000022;
+          }
+          input[name='option']{
+            opacity: 0;
+          }
+        </style>
+    </head>
+    <body>
+      <main class="container mt-4">
+        <h6>Its Time to Exam</h6>
+        <div class="container d-flex justify-content-between">
+          <div class="pt-2 text-center col-2 border rounded" style="background:#ccc;">1:30</div>
+          <div class="next-prev">
+            <button class="btn bg-primary text-light">Prev</button>
+            <button class="btn bg-info text-light">Next</button>
+          </div>
+        </div>
+        <div class="container mt-4 p-3 rounded-1" style="background:#edf0f6;">
+          <h5 class="text-secondary" id="qtnNo">Loading...</h5>
+          <h6 id="q">Which of the following is a server-side Java Script object?</h6>
+        </div>
+        <div class="container mt-4 p-3 rounded-1" style="background:#edf0f6;">
+          <form class="d-flex flex-column gap-3" name="form" id="form">
+            <label for="a" class="bg-light d-flex align-items-center gap-5  rounded-2 border position-relative overflow-hidden pt-2 pb-2">
+              <span class="rounded-5 fw-bold ps-2 pe-2 ms-3" style="background:#edf0f6;">A</span>
+              <h6 class="mt-2" id="opa">Function</h6>
+              <input type="radio" name="option" id="a" value="a">
+              <span  class="fw-bold position-absolute w-100 h-100 rounded-2"></span>
+            </label>
+            <label for="b" class="bg-light d-flex align-items-center gap-5  rounded-2 border position-relative overflow-hidden pt-2 pb-2">
+              <span for="b" class="rounded-5 fw-bold ps-2 pe-2 ms-3" style="background:#edf0f6;">B</span>
+              <h6 class="mt-2" id="opb">Function</h6>
+              <input type="radio" name="option" id="b" value="b">
+              <span class="fw-bold position-absolute w-100 h-100 rounded-2" ></span>
+            </label>
+            <label for="c" class="bg-light d-flex align-items-center gap-5  rounded-2 border position-relative overflow-hidden pt-2 pb-2">
+              <span for="c" class="rounded-5 fw-bold ps-2 pe-2 ms-3" style="background:#edf0f6;">C</span>
+              <h6 class="mt-2" id="opc">Function</h6>
+              <input type="radio" name="option" id="c" value="c">
+              <span class="fw-bold position-absolute w-100 h-100 rounded-2"></span>
+            </label>
+            <label for="d" class="bg-light d-flex align-items-center gap-5  rounded-2 border position-relative overflow-hidden pt-2 pb-2">
+              <span for="d" class="rounded-5 fw-bold ps-2 pe-2 ms-3" style="background:#edf0f6;">D</span>
+              <h6 class="mt-2" id="opd">Function</h6>
+              <input type="radio" name="option" id="d">
+              <span class="fw-bold position-absolute w-100 h-100 rounded-2"></span>
+            </label>
+          </form>
+        </div>
+      </main>
+    </body>
+    <script type="text/javascript" charset="utf-8">
+      const questions = [
+    {"id":1,a"question": "What is React?", "a": "Library", "b": "Framework", "c": "Language", "d": "None", "answer": "a"},
+    {"id":2,"question": "Which of the following is a JavaScript framework?", "a": "Laravel", "b": "Django", "c": "Angular", "d": "Spring", "answer": "c"},
+    {"id":3,"question": "Which method is used to parse a JSON string in JavaScript?", "a": "JSON.stringify()", "b": "JSON.parse()", "c": "JSON.convert()", "d": "JSON.toObject()", "answer": "b"},
+    {"id":4,"question": "Which company developed JavaScript?", "a": "Microsoft", "b": "Netscape", "c": "Sun Microsystems", "d": "IBM", "answer": "b"},
+    {"id":5,"question": "Which of the following is a primitive data type in JavaScript?", "a": "Object", "b": "Array", "c": "String", "d": "Function", "answer": "c"},
+    {"id":6,"question": "What is the output of 'typeof null' in JavaScript?", "a": "null", "b": "object", "c": "undefined", "d": "string", "answer": "b"},
+    {"id":7,"question": "Which keyword is used to declare a variable in JavaScript?", "a": "var", "b": "let", "c": "const", "d": "All of the above", "answer": "d"},
+    {"id":8,"question": "Which method is used to add an element at the end of an array in JavaScript?", "a": "push()", "b": "pop()", "c": "shift()", "d": "unshift()", "answer": "a"},
+    {"id":9,"question": "How do you write a comment in JavaScript?", "a": "// comment", "b": "/* comment */", "c": "<!-- comment -->", "d": "# comment", "answer": "a"},
+    {"id":10,"question": "Which method is used to find the length of a string in JavaScript?", "a": "length()", "b": "size()", "c": "count()", "d": "length", "answer": "d"},
+    {"id":11,"question": "What is the correct syntax for creating a function in JavaScript?", "a": "function myFunction()", "b": "def myFunction()", "c": "create myFunction()", "d": "function: myFunction()", "answer": "a"},
+    {"id":12,"question": "Which event occurs when a user clicks on an HTML element?", "a": "onchange", "b": "onclick", "c": "onmouseclick", "d": "onmouseover", "answer": "b"},
+    {"id":13,"question": "What does the 'this' keyword refer to in JavaScript?", "a": "The current object", "b": "The global object", "c": "The parent object", "d": "The previous object", "answer": "a"},
+    {"id":14,"question": "Which method can be used to create a new array from an existing array?", "a": "map()", "b": "filter()", "c": "reduce()", "d": "All of the above", "answer": "d"},
+    {"id":15,"question": "Which method is used to convert a JavaScript object to a JSON string?", "a": "JSON.parse()", "b": "JSON.convert()", "c": "JSON.stringify()", "d": "JSON.toString()", "answer": "c"},
+    {"id":16,"question": "Which of the following is not a reserved word in JavaScript?", "a": "interface", "b": "throws", "c": "program", "d": "short", "answer": "c"},
+    {"id":17,"question": "How do you declare a JavaScript variable?", "a": "variable carName;", "b": "var carName;", "c": "v carName;", "d": "dim carName;", "answer": "b"},
+    {"id":18,"question": "Which operator is used to assign a value to a variable?", "a": "*", "b": "=", "c": "-", "d": "+", "answer": "b"},
+    {"id":19,"question": "How do you round the number 7.25 to the nearest integer?", "a": "Math.round(7.25)", "b": "round(7.25)", "c": "Math.rnd(7.25)", "d": "rnd(7.25)", "answer": "a"},
+    {"id":20,"question": "Which event occurs when the user clicks on an HTML element?", "a": "onchange", "b": "onclick", "c": "onmouseclick", "d": "onmouseover", "answer": "b"},
+    {"id":21,"question": "How do you find the number with the highest value of x and y?", "a": "Math.max(x, y)", "b": "Math.ceil(x, y)", "c": "ceil(x, y)", "d": "top(x, y)", "answer": "a"},
+    {"id":22,"question": "Which operator is used to compare both value and type?", "a": "==", "b": "===", "c": ">", "d": "<", "answer": "b"},
+    {"id":23,"question": "How do you write a conditional statement for executing some code if 'i' is equal to 5?", "a": "if i==5 then", "b": "if (i==5)", "c": "if i=5 then", "d": "if i==5", "answer": "b"},
+    {"id":24,"question": "How does a for loop start?", "a": "for i = 1 to 5", "b": "for (i = 0; i <= 5)", "c": "for (i <= 5; i++)", "d": "for (i = 0; i <= 5; i++)", "answer": "d"},
+    {"id":25,"question": "Which of the following is not a JavaScript data type?", "a": "Undefined", "b": "Number", "c": "Boolean", "d": "Float", "answer": "d"},
+    {"id":26,"question": "Which method removes the last element from an array?", "a": "pop()", "b": "push()", "c": "shift()", "d": "unshift()", "answer": "a"},
+    {"id":27,"question": "Which method adds a new element to the beginning of an array?", "a": "pop()", "b": "push()", "c": "shift()", "d": "unshift()", "answer": "d"},
+    {"id":28,"question": "Which of the following is not a valid JavaScript variable name?", "a": "_firstAndLastNames", "b": "2names", "c": "first_and_last_names", "d": "firstAndLastNames", "answer": "b"},
+    {"id":29,"question": "What will the following code return: Boolean(10 > 9)", "a": "true", "b": "false", "c": "NaN", "d": "undefined", "answer": "a"},
+    {"id":30,"question": "What is the correct JavaScript syntax to write 'Hello World'?", "a": "System.out.println('Hello World')", "b": "println('Hello World')", "c": "document.write('Hello World')", "d": "response.write('Hello World')", "answer": "c"},
+    {"id":31,"question": "Which JavaScript label catches all the values, except for the ones specified?", "a": "catch", "b": "label", "c": "try", "d": "default", "answer": "d"},
+    {"id":32,"question": "How can you detect the client's browser name?", "a": "navigator.appName", "b": "client.navName", "c": "browser.name", "d": "navigator.name", "answer": "a"},
+    {"id":33,"question": "Which method can be used to remove whitespace from both ends of a string?", "a": "strip()", "b": "trim()", "c": "cut()", "d": "slice()", "answer": "b"},
+    {"id":34,"question": "How do you write an if statement in JavaScript?", "a": "if i = 5 then", "b": "if i == 5 then", "c": "if (i == 5)", "d": "if i = 5", "answer": "c"},
+    {"id":35,"question": "How does a while loop start?", "a": "while (i <= 10; i++)", "b": "while (i <= 10)", "c": "while i = 1 to 10", "d": "while (i => 10)", "answer": "b"},
+    {"id":36,"question": "How can you add a comment in a JavaScript?", "a": "//This is a comment", "b": "'This is a comment", "c": "<!--This is a comment-->", "d": "/*This is a comment*/", "answer": "a"},
+    {"id":37,"question": "How do you declare a JavaScript variable?", "a": "var carName;", "b": "v carName;", "c": "variable carName;", "d": "dim carName;", "answer": "a"}
+    ];
+      const anser = [];
+      const nextPrev = document.querySelectorAll(".next-prev button");
+      var i=0;
+      
+      nextPrev[1].onclick = ()=>{
+        anser.push({
+          "id":questions[i].id,
+          "select":document.querySelector("input[name='option']:checked").value
+        });
+        console.log(anser);
+        form.reset();
+        i<=questions.length ? viewData(++i) : alert('not avalable'); 
+        
+      }
+      nextPrev[0].onclick = ()=>{
+        i>0 ? viewData(--i) : alert('not avalable'); 
+      }
+    function viewData(i){
+      document.querySelector("#q").innerHTML=questions[i].question;
+      document.querySelector("#opa").innerHTML=questions[i].a;
+      document.querySelector("#opb").innerHTML=questions[i].b;
+      document.querySelector("#opc").innerHTML=questions[i].c;
+      document.querySelector("#opd").innerHTML=questions[i].d;
+      document.querySelector('#qtnNo').innerHTML=`Question ${i} of ${questions.length}`;
+    }
+    viewData(0);
+    </script>
+</html>

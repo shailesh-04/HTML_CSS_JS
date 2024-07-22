@@ -1,0 +1,152 @@
+<html>
+  <head>
+    <title>patrick Pase</title>
+     <!-- costom Main Css It's -->
+     
+    <style rel="stylesheet" type="text/css">
+      *{
+        padding: 0;
+        margin: 0;
+        box-sizing: border-box;
+        text-decoration: none;
+        border: none;
+        font-family: Sans-Serif;
+        scroll-behavior: smooth;
+        outline: none;
+      }
+      html{
+        font-size: 10px;
+      }
+    :root{
+      --bg-color:#1d2421;
+      --main-color:#53fca2;
+      --text-color:#fff;
+    }
+    body{
+      background: var(--bg-color);
+      width:100%;
+    }
+    .header{
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      padding: 2rem 9%;
+      display: flex;
+      text-align: center;
+      justify-content: space-between;
+      z-index: 100;
+    }
+    span{
+      color: var(--main-color);
+    }
+    .logo{
+      color:var(--text-color);
+      font-size: 2rem;
+      font-weight: 770;
+    }
+    .nav-bar a{
+      position: relative;
+      color: var(--text-color);
+      margin-left: 3.5rem;
+      font-size: 1.7rem;
+      font-weight: 500;
+      transition: .6s;
+    }
+    .nav-bar a:hover{
+      color: var(--main-color);
+    }
+    section{
+      height: 100vh;
+      width: 100%;
+    }
+    .home{
+      display:flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 13%;
+    }
+    .home-cont{
+      color: var(--text-color);
+    }
+    .home-cont h3{
+      font-size: 3rem;  
+      margin: 1.5rem 0;
+    }
+    .home-cont h1{
+      font-size: 5rem;
+    }
+    .home-cont p{
+      font-size: 1.6rem;
+      margin-bottom: 3rem;
+    }
+    .btn{
+      font-size: 1.6rem;
+      background: var(--main-color);
+      padding:2rem 3rem ;
+      color: var(--text-color);
+      border-radius: 1rem;
+    }
+    .social-Medea{
+      margin-top: 7rem;
+    }
+    .social-Medea a{
+      font-size: 3rem;
+      color: var(--text-color);
+      padding: .5rem;
+      border-radius: 50%;
+      margin-left: 1rem;
+      background: var(--main-color);
+    }
+    .home-img i{
+      font-size: 40rem;
+      background-image:
+      border: 2rem solid var(--main-color);
+      color:#446959;
+    }
+    </style>
+    
+    <!-- css icon Link -->
+      <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+  </head>
+  <body>
+    
+<!-- -------------NavBar------------- -->
+    <header class="header">
+      <h3 class="logo">Patrick<span> Moz</span></h3>
+      
+      <nav class="nav-bar">
+          
+          <a href="#Home">Home</a>
+          <a href="#About">About</a>
+          <a href="#Service">Service</a>
+          <a href="#Project">Project</a>
+          <a href="#Contact">Contact</a>
+        
+      </nav>
+    </header>
+    <section class="home" id="Home">
+      <div class="home-cont">
+        <h3>Hallo,<span>I'm</span></h3>
+        <h1><span>Patrick Moz</span></h1>
+        <h3>Front-end Developer</h3>
+        <p>Whith knowledge web development and design,i offer the best projects
+        resulting in Quality Work.</p>
+        <a href="#" class="btn">Let's Talk</a>
+        
+        <div class="social-Medea">
+          <a href="#"><i class='bx bxl-instagram'></i></a>
+          <a href="#"><i class='bx bxl-facebook-circle'></i></a>
+          <a href="#"><i class='bx bxl-linkedin-square' ></i></a>  
+        </div>
+        
+      </div>
+      
+      
+      <div class="home-img">
+        <i class='bx bx-wink-tongue' ></i>  
+      </div>
+    </section>
+    
+  </body>
+</html>

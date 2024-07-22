@@ -1,0 +1,116 @@
+<html>
+  <head>
+    <title>Admin Pase</title>
+    <link rel="stylesheet" type="text/css" href="AdminPase.css">
+  </head>
+  <body>
+    </div>
+      <center>
+        <div class="Profile" id="Profile">
+          <i><img src="Images/closeIcon.png" id="CloseIcon" ></i>
+        <img class="PLogo" src="Images/AdminLogo.jpg" alt="Adnim Logo"/>
+        <h2>Nl Raju</h2>
+        <hr>
+        <label>UserName</label>
+        <h4>Shialesh04</h4>
+        <hr>
+        <label>Gender  :</label>
+        <h4>Male</h4>
+        <hr>
+        <label>E-mail  :</label>
+        <h4>Shialesakol@gmail.com</h4>
+        <hr>
+        <label>ContacNO.  :</label>
+        <h4>+91 90542 77612 </h4>
+        <hr>
+        <button>Update Profile</button>
+        <button>Update Profile Pic</button>
+      </center>
+    </div>
+    <header>
+      <img class="Logo" src="Images/AdminLogo.jpg" alt="Adnim Logo"/>
+      <h2>Addmin :  NL Raju</h2>
+      <div class="headerIcon">
+        <a href="#"><img class="UserIcon" id="UserIcon" src="Images/icon2.png" alt="User"></a>
+        <a href="#"><img src="Images/setting.png" alt="Setting"></a>
+        <a href="S_M_S.html"><img src="Images/icon1.png"></a>
+      </div>    
+    </header>
+    
+    
+    <nav class="Nav-Bar">
+      <h3>Student Mange. System</h3>
+      <div class="Nav-item">
+        <ul>
+          <li>Dasebord</li>
+          <li>
+            <select>
+              <option>Students</option>
+              <option></option>
+              <option></option>
+            </select>
+          </li>
+          <li>
+            <select>
+              <option>Notice</option>
+              <option></option>
+              <option></option>
+            </select>
+          </li>
+          <li>
+            <select>
+              <option>Pase</option>
+              <option></option>
+              <option></option>
+            </select>
+          </li>
+          <li>Searse</li>
+        </ul>
+      </div>
+    </nav>
+    
+    
+    <main>
+      <div class="contaner">
+        <div class="Head">
+          <button>Manage Student</button>
+          <button>manage Notice</button>
+          <a href="#">SignUp Request<span>0</span></a>
+          <a href="#">Update Requets<span>0</span></a>
+        </div>
+        <div class="Sem_cont">
+          <div class="Sem">
+            <img src="Images/Students.png">
+            <h3>Sem 1 Student </h3>
+            <p>10</p>
+          </div>
+          <div class="Sem">
+            <img src="Images/Students.png">
+            <h3>Sem 2 Student</h3>
+            <p>10</p>
+          </div>
+          <div class="Sem">
+            <img src="Images/Students.png">
+            <h3>Sem 3 Stdent</h3>
+            <p>10</p>
+          </div>
+          <div class="sem">
+            <img src="Images/bulletin.png">
+            <h3>Notice</h3>
+            <p>10</p>
+          </div>
+        </div>
+    </main>
+    <script type="text/javascript">
+      const userButton = document.getElementById('UserIcon');
+      const profilePase = document.getElementById('Profile');
+      const closePase = document.getElementById('CloseIcon');
+      userButton.addEventListener("click", function() {
+        profilePase.style.display="block";
+      });
+      closePase.addEventListener("click", function() {
+        profilePase.style.display="none";
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,260 @@
+* {
+  box-sizing: border-box;
+  font-family: Sans-Serif;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  width: 100%;
+}
+
+header {
+  border-radius: 5px;
+  margin: 0px auto;
+  width: 100%;
+  box-sizing: border-box;
+  height: 98vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Images/SMS.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 10px;
+}
+
+.nav-bar {
+  width: 100%;
+  height: 65px;
+  position: sticky;
+  /* for Safari */
+  top: 0px;
+  padding-top: 6px;
+  margin: 0px auto;
+  border-radius: 0px;
+  background-color: #d40e72;
+}
+
+.nav-bar ul {
+  display: flex;
+  margin-right: 30px;
+  flex-direction: row-reverse;
+  list-style-type: none;
+}
+
+.nav-bar li {
+  margin: 10px;
+  font-size: 18px;
+  letter-spacing: 2px;
+}
+
+.nav-bar ul li a {
+  text-decoration: none;
+  position: relative;
+}
+
+.nav-bar ul li h1 {
+  color: white;
+}
+
+.nav-bar ul li a::before {
+  content: '';
+  height: 3px;
+  border-radius: 9px;
+  width: 0%;
+  margin: 3px;
+  position: absolute;
+  background-color: #f885e1;
+  left: -5px;
+  top: -7px;
+  transition-property: width;
+  transition-duration: 2s;
+  transition-delay: .1s;
+}
+
+.nav-bar ul li a:hover::before {
+  width: 108%;
+}
+
+.nav-bar ul li a::after {
+  content: '';
+  height: 3px;
+  border-radius: 9px;
+  margin: 3px;
+  width: 0%;
+  position: absolute;
+  background-color: #f885e1;
+  left: -5px;
+  top: 20px;
+  transition-property: width;
+  transition-duration: 2s;
+  transition-delay: .1s;
+}
+
+.nav-bar ul li a:hover::after {
+  width: 108%;
+}
+
+main {
+  width: 99%;
+  height: auto;
+  padding: 5px;
+  margin: 1px auto;
+  border-radius: 4px;
+}
+
+.main-contant h2 {
+  margin-top: 15px;
+  text-align: center;
+  font-family: Sans-Serif;
+  color: #e60b70;
+  font-size: 40px;
+}
+
+.main-contant {
+  border: 4px  solid #e60b70;
+  padding: 0px 50px;
+  background-color: white;
+  border-radius: 50px 0px 50px 0px;
+  margin: 15px auto;
+  width: 95%;
+  font-size: 20px;
+  text-transform: capitalize;
+  word-break: break-all;
+  text-indent: 2cm;
+  line-height: 35px;
+}
+
+.main-contant div {
+  width: 100%;
+  height: 0.5px;
+  margin: 30px;
+  background-color: #e60b00;
+}
+
+table {
+  border-collapse: collapse;
+  font-family: Sans-Serif;
+  margin: 20px auto;
+  color: #ffffff;
+  width: 70%;
+}
+
+tr, th, td {
+  border: 0.4px solid black;
+  padding: 10px;
+  text-align: center;
+}
+
+tr:nth-child(odd) {
+  background: #914b91;
+}
+
+tr:nth-child(even) {
+  background: #c271c2;
+}
+
+th {
+  background-color: #ff0eff;
+}
+
+.Notice-con h1 {
+  margin-top: 15px;
+  text-align: center;
+  font-family: Sans-Serif;
+  color: #e60b70;
+  font-size: 40px;
+}
+
+.ftr_Contak {
+  display: flex;
+}
+
+.ftr_Contak div {
+  width: 30%;
+  height: auto;
+  margin: 10px auto;
+}
+
+.ftr_Contak div h2 {
+  color: #7c34fd;
+}
+
+.ftr_Contak div p {
+  color: #5c004a;
+}
+
+.Con h1 {
+  display: block;
+  width: 100%;
+  margin-top: 15px;
+  text-align: center;
+  font-family: Sans-Serif;
+  color: #e60b70;
+  font-size: 35px;
+}
+
+.ftr_Contak div div {
+  margin: 1px;
+  margin-bottom: 4px;
+  background-color: red;
+  width: 100%;
+  padding: 1px;
+}
+
+footer {
+  margin: 20px auto;
+  color: #fff;
+  background: #333;
+  position: relative;
+  /* required to position the copyright at the bottom */
+  font-size: 80%;
+}
+
+.footer-copyright {
+  width: 100%;
+  height: auto;
+  background: #111;
+  /* positions the copyright at the bottom of the footer */
+  padding: 10px;
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+}
+
+.footer-body {
+  margin-bottom: 0px;
+  padding: 50px;
+}
+
+.footer-body > div:first-child {
+  font-size: 30px;
+}
+
+.footer-body ul {
+  list-style-type: none;
+  margin-top: -100px;
+  padding: 0px;
+  text-align: center;
+}
+
+.footer-body li > a {
+  color: white;
+  text-decoration: none;
+  margin-top: 7px;
+}
+
+.aboutP {
+  margin: 10px;
+  border: 1px solid red;
+  width: 200px;
+  height: auto;
+  font-size: 20px;
+  background-color: #333;
+}
+
+.aboutP::before {
+  content: '~~>';
+  color: green;
+  position: static;
+  left: 10px;
+}

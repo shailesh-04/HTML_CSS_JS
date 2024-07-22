@@ -1,0 +1,212 @@
+<html>
+  <head>
+    <title>Alexa</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+    
+    <style type="text/css">
+      *{
+        box-sizing: border-box;
+        padding: 0
+        margin: 0;
+        text-decoration: none;
+        border: none;
+      }
+      html{
+        font-size: 10px;
+      }
+      :root{
+        --main-color:#7261d8;
+      }
+      section{
+        width: 100%;
+        min-height: 100vh;
+        display: flex;align-items: center;
+        justify-content: center;
+      }
+      .header{
+        width: 100%;
+        color: white;
+        position: fixed;
+        top: 0;
+        left: 0;
+        padding: 2rem 9%;
+        font-size: 1.6rem;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .header .logo{
+        font-size: 2rem;
+        color: accent-lime-900;
+        font-weight: 500;
+      }
+      .header .nav-bar{
+        display: flex;
+      }
+      .header .nav-bar a,.day-night{
+        color: #000;
+        margin-left: 3rem;
+      }
+      .header .nav-bar .day-night i{
+        position:absolute;
+        margin-left: 1rem;
+      }
+      .bxs-sun{
+        display: none;
+      }
+      
+      .home{
+        padding: 2rem 9%;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content:center ;
+      }
+      .home .home-socialmedea{
+        display: flex;
+        position:absolute;
+        flex-direction: column;
+        top: 40%;
+        left: 10%;
+        font-size: 2.4rem;
+        gap: 2rem;
+      }
+
+      .home .home-text{
+        font-size: 1.2rem;
+        margin-top:0rem ;
+        max-width: 30rem;
+      }
+      .home .home-text h2{
+        font-size: 4rem;
+        margin-bottom:-.5rem ;
+      }
+      .home .home-text h3{
+        margin: 1rem 0 2rem 0;
+        font-weight: 400;
+        font-size: 1.6rem;
+      }
+      .home .home-text .btn{
+        position: relative;
+        top: 3rem;
+        color: #fff;
+        font-size: 1.5rem;
+        padding: 2rem 2.5rem;
+        background: var(--main-color);
+        border-radius: 1rem;
+      }
+      .home .home-img{
+        margin-top: 8rem;
+        margin-left: 8rem;
+        border-radius: 47% 53% 54% 46% / 31% 29% 73% 71% ;
+        overflow: hidden;
+        box-shadow: 0 0 1rem accent-blue-600;
+        width:25rem ;
+        height: 25rem;
+      }
+      .home .home-img img{
+        background: var(--main-color);
+        width: 100%;
+        height: 100%;
+      }
+      #menu-Btn,#close-Btn{
+        color: var(--main-color);
+        font-size: 4rem;
+        position: absolute;
+        top:2.5rem;
+        right:5rem;
+        z-index: 100;
+      }
+      #close-Btn{
+        color: #fff;
+        display: none;
+      }
+      .navin{
+        position: absolute;
+        flex-direction: column;
+        gap:3rem;
+        top:1rem;
+        right:3rem;
+        background: #6150d8aa;
+        box-shadow:0 0 .5rem #000;
+        border-radius: .4rem;
+        padding: 3rem;
+        align-items: start;
+        width: 26rem;
+      }
+      @media only screen and (max-width: 700px) {
+         .home {
+            flex-direction: column;
+            gap: 3rem;
+            padding: 1rem 5%;
+         }
+         .home .home-img{
+            margin-left: 0;
+         }
+         #menu-Btn{
+           display: block;
+         }
+         .header .nav-bar{
+          display: none;
+        }
+      }
+      @media only screen and (min-width: 1200px) {
+        #menu-Btn{
+        
+        }
+        .header .nav-bar{
+          display: flex;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <section>
+      <header class="header">
+          <a class="logo" href="#">Alexa</a>
+          <i class='bx bx-menu' id="menu-Btn"></i>
+          <i class='bx bx-x' id="close-Btn"></i>
+          <nav class="nav-bar">
+            <a href="#Home">Home</a>
+            <a href="#About">About</a>
+            <a href="#Skills">Skills</a>
+            <a href="#Servise">Servise</a>
+            <a href="#Portfolio">Portfolio</a>
+            <a href="#Contact">Contact</a>
+            <div class="day-night">
+              <i class='bx bxs-moon'></i>
+              <i class='bx bxs-sun'></i>
+            </div>
+          </nav>
+      </header>
+      <div class="home" id="Home">
+        <div class="home-socialmedea">
+          <a href="#"><i class='bx bxl-linkedin-square'></i></a>
+          <a href="#"><i class='bx bx-basketball'></i></a>
+          <a href="#"><i class='bx bxl-github'></i></a>
+        </div>
+        <div class="home-text">
+          <h2>Hi, I'am Alexa</h2>
+          <h3>Frontend developer</h3>
+          <p>High level experience web design and development
+          knowledge,producing quality work</p>
+          <a class="btn" href="#">Contact Me <i class='bx bx-send'></i></a>
+          
+        </div>
+        <div class="home-img">
+          <img src="logo.png" alt="">
+        </div>
+      </div>
+    </section>
+    
+  </body>
+  <script type="text/javascript">
+    const navBar = document.querySelector(".nav-bar");
+    const menuBtn = document.getElementById("menu-Btn");
+    const menuBtn = document.getElementById("close-Btn");
+    menuBtn.addEventListener('onclick', function(){
+      navBar.classList.toggle("navin");
+    });
+  </script>
+</html>

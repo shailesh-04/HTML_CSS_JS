@@ -1,0 +1,88 @@
+<html>
+  <head>
+    <title>Update Admin Profile</title>
+    <style type="text/css">
+    *{
+      padding: 0;
+      margin: 0;
+      font-family: Sans-Serif;
+      box-sizing: border-box;
+    }
+    body{
+      width:100% ;
+      background-image: linear-gradient(left-top to right-botton red,green);
+    }
+    .Profile{
+      width: 60%;
+      background-color: #dfdfdf;
+      margin: 20px auto 0px auto;
+      border:5px solid #cfcfcf ;
+      border-radius: 4px;
+    }
+    form{
+      margin: 0px auto;
+      padding: 20px;
+      
+    }
+    input,label{
+      margin: 0px auto;
+    }
+    input,label:not(.Gender){
+      display: inline-block;  
+    }
+    .Gender{
+      margin: 1px;
+      display: block;
+    }
+    .Gender > label{
+      display: inline;
+    }
+    .Gender > input{
+      width: 80px;
+      
+    }
+    input{
+      padding: 10px;
+      width: 90%;
+      margin: 0 auto;  
+      font-size:18px;
+      margin:0px 0px 0px 9px ;
+    }
+    label{
+      width: 90%;
+      font-size:17px;
+      padding: 10px 10px 0px 10px;
+    }
+    </style>
+  </head>
+  <body>
+      <div class="Profile">
+        <form>  
+          <header>
+            <h3>Update Profile</h3>
+          </header>
+          <label>Name</label>
+          <input type="text" value="Nl Raju" id="Fn"><br>
+          <label>UserName</label>
+          <input type="text" value="Shialesh04"><br>
+          <div class="Gender">
+            <h3>Gender</h3>
+            <label>Male:</label><input type="radio" name="Gender">
+            <label>Femal:</label><input type="radio" name="Gender">
+          </div>
+          <label>E-mail  :</label>
+          <input type="email" value="Shialesakol@gmail.com"><br>
+          <label>ContacNO.  :</label>
+          <input type="text" value="+91 90542 77612"><br>
+          <button onclick="Sub()">Update</button>
+          <button>Cancel</button>
+        </form>
+      </div>
+    <script type="text/javascript">
+      function Sub(){
+        var Name = document.getElementById('Fn').value;
+        alert(Name);
+      }
+    </script>      
+  </body>
+</html>
