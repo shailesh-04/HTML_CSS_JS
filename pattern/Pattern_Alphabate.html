@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alphabet pattern 4 - javascript</title>
+  <style type="text/css">
+  body{
+     background-color: #ff0f08;
+  }
+   </style>
+</head>
+<body>
+  <h2>Creating alphabet pattern in javascript.</h2>
+  <form name="Form" onsubmit="Pattrn()">
+     <lable>Enter Pattrn Charcter</lable>
+     <input type="text" name="inputPass">
+     <br><br>
+    
+     <input type="submit" value="Submit">
+  </form>
+  <script>
+  function Pattrn()
+  {
+      var chart = document.Form.inputPass.value;
+      var Ascii = chart.charCodeAt();
+      var i,j;
+         if(Ascii<=96)
+         {
+            for(i=65; i<=Ascii; i++)
+            {
+               for(j=65; j<=i; j++)
+               {
+               var c=String.fromCharCode(i);
+                 document.write(" "+c);
+               }
+               document.write("<br>");
+            }
+         }
+         else
+         {
+            for(i=97; i<=Ascii; i++)
+            {
+               for(j=97; j<=i; j++)
+               {
+                 document.write(String.fromCharCode(i));
+               }
+               document.write("<br>");
+            }
+         }
+  }
+  </script>
+  
+</body>  
+</html>

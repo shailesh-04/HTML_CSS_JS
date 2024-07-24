@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+<body>
+</body>
+<script type="application/javascript" charset="utf-8">
+  var str = "abcd";
+  var str1 = "as";
+  let len = str.length;
+  var count =0;
+  function Rec(l){
+    for(let i=0; i<l; i++){
+      for(let j=0; j<l; j++){
+        document.write(str[(j+i)%4]);
+      }
+      document.write("<br>");
+      str1[i] = str[(j+i)%4];
+    }
+      document.write("<br>");
+    if(count++<5)
+        Rec(len--);
+  }
+  Rec(len);
+  console.log(len);
+</script>
+</html>

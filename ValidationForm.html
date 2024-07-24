@@ -1,0 +1,37 @@
+<html>
+<body>
+<script>  
+function validateemail()  
+{  
+//Email  valid
+var x=document.myform.email.value;  
+var addres=x.indexOf("@");  
+var dot=x.lastIndexOf(".");  
+//if (addres<1 || dot<addres+2 || dot+2>=x.length){  
+ // alert("Please enter a valid e-mail address \n atpostion:"+addres+"\n dot:"+dot);  
+  //return false;    }
+  //Number Valid  
+  var Num=document.myform.Num.value;
+  var ValidNum=/^[0-9]$/;
+  if(Num==ValidNum)
+  {
+  	alert("This Is A Number");
+  	return false;
+  }
+  else
+  {
+  	alert("This In Not Number");
+  	return false;
+  }
+}  
+</script>  
+<body>  
+<form name="myform"  method="post" action="http://www.javatpoint.com/javascriptpages/valid.jsp" onsubmit="return validateemail();">  
+Email: <input type="text" name="email"><br/>  
+  Number:<input type="text" name="Num"  >
+<input type="submit" value="register">  
+</form>  
+</body>
+</html>
+
+ 

@@ -1,0 +1,90 @@
+   <html>
+      <head>
+         <title>Find MId Max Or Min Using Treee Variable</title>
+        <!-- <link type="text/css" rel="stylesheet" href="Find_Mid_Max_Min.css"> -->
+         <!-- <script type="text/javascript" src="Find_Mid_Max_min.js" ></script> -->
+         <style type="text/css">
+            body{
+   display: scroll;
+   position: absolute;
+}
+.btn{
+   padding:10px;
+   background-image:linear-gradient(40deg,green,white,red); 
+   border:1px dashed yellow;
+}
+input{
+   border: 0.5px dashed black;
+   margin: 7px;
+   padding: 10px;
+   outline: none;
+   transition-duration: 4s;
+}
+input:hover{
+   border: none;
+   border-bottom:2px groove red ;
+}
+         </style>
+      </head>
+      <body>
+       
+            <h1>Find Middle ,Maximum Or Minimum NUmber</h1><br>
+            Number1:<input id="Inp_Num1" placeholder="Enter Firts Number ...."><br>
+            Number2: <input id="Inp_Num2" placeholder="Enter Second Number...."><br>
+            Number3: <input id="Inp_Num3" placeholder="Enter Third Number....."><br>
+            <br><br>
+            <button onclick="Max_Mid_min()">Max Mid Min</button>
+            <h2>Result</h2>   
+            <p id="ans2"></p>
+            <p id="ans1"></p>
+            <p id="ans3"></p>
+           <script type="text/javascript">
+              function Max_Mid_min(){   
+   var a=Number(document.getElementById("Inp_Num1").value);
+   var b=Number(document.getElementById("Inp_Num2").value);
+   var c=Number(document.getElementById("Inp_Num3").value);
+   
+   //Middle
+   if(a>b&&a<c||a<b&&a>c)
+	{
+		document.getElementById("ans1").innerHTML="Middle :-"+a;
+	}
+	else if(b>a&&b<c||b<a&&b>c)
+	{
+		document.getElementById("ans1").innerHTML="Middle :-"+b;
+	}
+	else
+	{
+		document.getElementById("ans1").innerHTML="Middle :-"+c;
+	}
+	
+	//MAximum
+	if(a>b&&a>c)
+	{
+	   document.getElementById("ans2").innerHTML="Maximum :-"+a;
+	}
+	else if(b>a&&b>c)
+	{
+	   document.getElementById("ans2").innerHTML="Maximum :-"+b;
+	}
+	else
+	{
+      document.getElementById("ans2").innerHTML="Maximum :-"+c;
+	}          
+	//Minimum
+   if(a<c&&a<b)
+	{     
+		  document.getElementById("ans3").innerHTML="Minimum :-"+a;
+ 	}
+ 	else if(b<a&&b<c)
+ 	{
+ 	     document.getElementById("ans3").innerHTML="Minimum :-"+b;
+	}
+ 	else
+ 	{
+ 		  document.getElementById("ans3").innerHTML="Minimum :-"+c;
+ 	}
+}
+           </script> 
+      </body>
+   </html>

@@ -1,0 +1,31 @@
+<html>
+   <head>
+      <title>Valid Form</title>
+      <script type="text/javascript">
+      function Valid()
+      {
+         var pass = document.Form.Password.value;
+       //   var OnlyNumber = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+        // if(Password.match(OnlyNumber))
+         if(pass==""||pass==null)
+         {
+            alert("Not Accept Password..");
+            return false;
+         } 
+         else{
+         
+         alert("Passwoed Is Accept");         
+         return true;
+         }
+   }
+      </script>
+   </head>
+   <body>
+      <form name="Form" onsubmit="return Valid()">
+         <label>Password</label>
+         <input name="Password" id="inputPass"type="password" placeholder="Enter Password..">
+         <br><br>
+         <input type="submit" value="Submit">
+      </form>
+   </body>
+</html>

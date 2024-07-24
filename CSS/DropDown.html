@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title> Try It Yourself </title>
+   <style type="text/css">
+   
+      .dd {
+         position: relative;
+         display: inline-block;
+      }
+      .dd-btn {
+         padding: 4px;
+         text-align: center;
+         /* background: #173459; */
+         border: 2px solid red;
+         color: #f8f9f9;
+      }
+      .dd-btn hr{
+        margin: 9px 9px 9px 9px;
+        width: 40px;
+        background: red;
+      }
+      .dd-content {
+         position: absolute;
+         width: 100%;
+         box-shadow: 0 18px 36px rgba(0,0,0,0.30), 0 14px 11px rgba(0,0,0,0.22);
+         height: 0px;
+         transition: height 1s;
+         overflow: hidden;
+      }
+      .dd:hover > .dd-content {
+         height: 150px;
+         width: 300px;
+      }
+      .dd-content > a {
+         display: block;
+         padding: 15px;
+         text-decoration: none;
+         color: black;
+      }
+   </style>
+</head>
+<body>
+   <div class="dd">
+      <div class="dd-btn">
+        <hr>
+        <hr>
+        <hr>
+      </div>
+      <div class="dd-content">
+         <a href="#"> Home </a>
+         <a href="#"> About </a>
+         <a href="#"> Articles </a>
+      </div>
+   </div>
+</body>
+</html>

@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Simple Form</title>
+  <style type="text/css">
+    form{
+      /* background: radial-gradient(65% 100% at 50% 0%, #18005B 0%, #000000 100%), radial-gradient(circle at 30% 45%, #FF0000 0%, #FF0000 5%, #FFFF00 5%, #FFFF00 10%, #00FF00 10%, #00FF00 15%, #00FFFF 15%, #00FFFF 20%, #0000FF 20%, #0000FF 30%, #FF00FF 30%, #FF00FF 40%, #FF0000 40%), radial-gradient(circle at 50% 0%, #FF0000 0%, #FF0000 5%, #FFFF00 5%, #FFFF00 10%, #00FF00 10%, #00FF00 20%, #00FFFF 20%, #00FFFF 30%, #0000FF 30%, #0000FF 40%, #FF00FF 40%, #FF00FF 50%, #FF0000 50%), conic-gradient(from 15deg at 20% 420%, #FF0000 0deg, #FF0000 55deg, #FFFF00 60deg, #FFFF00 120deg, #00FF00 120deg, #00FF00 180deg, #00FFFF 180deg, #00FFFF 240deg, #0000FF 240deg, #0000FF 300deg, #FF00FF 310deg, #FF00FF 360deg, #FF0000 360deg); */
+      background: linear-gradient(180deg, #1400FF 0%, #000000 100%), linear-gradient(154.03deg, #33FF00 0%, #FF003D 74.04%), linear-gradient(341.1deg, #F3D0FC 7.52%, #1700A4 77.98%), linear-gradient(222.34deg, #A90000 12.99%, #00FFE0 87.21%), linear-gradient(150.76deg, #B7D500 15.35%, #2200AA 89.57%);
+background-blend-mode: overlay, difference, difference, difference, normal;
+      /* background: linear-gradient(238deg, rgb(130, 255, 0) 0%, rgb(0, 84, 166) 100%), linear-gradient(238deg, rgb(0, 255, 69) 0%, rgb(0, 0, 0) 100%), linear-gradient(238deg, rgb(255, 255, 255) 48%, rgb(3, 0, 151) 100%), radial-gradient(100% 85% at 0% 100%, rgb(0, 0, 0) 0%, rgb(0, 131, 255) 50%, rgb(255, 0, 0) 100%), radial-gradient(100% 225% at 0% 100%, rgb(255, 0, 0) 0%, rgb(66, 255, 0) 100%), radial-gradient(100% 140% at 100% 0%, rgb(0, 134, 62) 0%, rgb(0, 239, 255) 50%, rgb(0, 113, 186) 100%); */
+background-blend-mode: color-dodge, overlay, multiply, difference, difference, normal;
+background-blend-mode: screen, multiply, multiply, normal;
+      display: flex;
+      width: 100%;
+      height: 100vh;
+      align-items: center;
+      justify-content: center;
+    }
+    table{
+      height: 70%;
+      width:70%;
+    }
+    #btn{
+      height: 2rem;
+      width: 70%;
+    }
+  </style>
+</head>
+<body>
+  <form method="post" action="https://sheetdb.io/api/v1/rc787jyzgrxf2" id="sheetdb-form">
+    <table border="1px">
+      <tr>
+        <th colspan="2">Resitation Form</th>
+      </tr>
+      <tr>
+        <td>User Name</td>
+        <td><input type="text" name="data[username]" placeholder="Enter Name"></td>
+      </tr>
+      <tr>
+        <td>Password</td>
+        <td><input type="password" name="data[password]" placeholder="Enter Password"></td>
+      </tr>
+      <tr>
+        <td>ContactNO.</td>
+        <td><input type="number" name="data[contactno]"  placeholder="Enter ContactNO"></td>
+      </tr>
+      <tr>
+        <td>Gender</td>
+        <td><label>Male</label><input type="radio" name="data[gender]" value="male" placeholder="Enter Name">
+        <label>Femal</label><input type="radio" name="data[gender]" value="femal" placeholder="Enter Name"></td>
+      </tr>
+      <tr>
+        <td>Hobbis</td>
+        <td><input type="text" name="data[hobis]" placeholder="Enter Hobis"></td>
+      </tr>
+      <tr>
+        <td>City</td>
+        <td><input type="text" name="data[city]"  placeholder="Enter City"></td>
+      </tr>
+      <tr>
+        <td>Adress</td>
+        <td><input type="text" name="data[adress]" placeholder="Enter Adress"></td>
+      </tr>
+      <tr>
+        <td>ProfilePiture</td>
+        <td><input type="file" name=""></td>
+      </tr>
+      <tr>
+        <td colspan="2"><input type="submit" name="submit" value="resister" id="btn"></td>
+      </tr>
+    </table>
+  </form>
+  <p id="ou"></p>
+</body>
+  <script>
+          const out = document.getElementById("ou");
+          var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+          e.preventDefault();
+          fetch(form.action, {
+              method : "POST",
+              body: new FormData(document.getElementById("sheetdb-form")),
+          }).then(
+              response => response.json()
+          ).then((html) => {
+            // you can put any JS code here
+             out.innerHTML = seccsefuly send ;
+            //window.open('page2.html', '_blank');
+          });
+        });
+  </script>
+</html>

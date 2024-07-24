@@ -1,0 +1,41 @@
+<html>
+   <head>
+      <title>Number VAlidation In javascript</title>
+      <style type="text/css">
+        #Mal{
+            outline:none;
+            border:none;
+            border-bottom:1px solid black;
+            border-width: 1px;
+         }
+      </style>
+   </head>
+   <body>
+      <h4>Emanl Validation</h4>
+      <script type="text/javascript">
+      function ValidEmail()
+      {
+         alert("qwe");
+         var x = document.getElementById("Mal").value;
+         var a = x.indexOf("@");
+         var d = x.lastIndexOf(".");
+         if(a<1||d<a+2||d+2>=x.length);
+         {
+            document.getElementById("valid").innerHTML="Please Enter VAlid Email......";
+            return false;
+         }
+         else
+         {
+            document.getElementById("valid").innerHTML="Email is Valid......";
+         }
+      }
+      </script>
+      <form onsubmit="return ValidEmail()">
+         <label>Email:</label>
+         <input type="text" id="Mal" placeholder="Enter Your Email.."><br>
+         <span id="valid" style="color:red;"></span>
+         <br>
+         <input type="submit" value="submit">
+      </form>
+   </body>
+</html>

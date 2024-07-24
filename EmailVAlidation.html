@@ -1,0 +1,27 @@
+<html>
+  <head>
+    <title>Email Vaidation In Java sript</title>
+    <script type="text/javascript">
+      function Valid()
+      {
+        var e = Form.E_mail.value;
+        var ad = e.indexOf("@");
+        var dt = e.lastIndexOf(".");
+        if(ad<1||dt<ad+2||dt>=e.langth)
+        {
+          alert("please.. Enter Valid Enail. ");
+        }
+        else
+        {
+          alert("Thanck You sir Your Day Is Good");  
+        }
+      }
+    </script>
+  </head>
+  <form name="Form" onsubmit="return Valid()">
+    <lable for="E_mail">Email</lable>
+    <input type="text" name="E_mail">
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+</html>

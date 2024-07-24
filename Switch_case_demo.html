@@ -1,0 +1,30 @@
+<html>
+	<head>
+		<title>Switch Case demo</title>
+	</head>
+	<body>
+		<p id="demo"></p>
+		<script type="text/javascript">
+			var Day;
+			switch(new Day().getDay()){
+			case 0 : Day="Sunday";
+					break;
+			case 1 : Day="Monday";
+					break;
+			case 2 : Day="tuesDay";
+					break;
+			case 3 : Day="Wednesday";
+					break;
+			case 4 : Day="Thursday`";
+					break;
+			case 5 : Day="frisday";
+					break;
+			case 6 : Day="satureday";
+					break;
+			default:Day="Enter In Valid";
+					break;
+			}
+			document.getElementById("demo").innerHTML=Day;
+		</script>
+	</body>
+</html>

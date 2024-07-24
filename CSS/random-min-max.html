@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title> Try It Yourself </title>
+</head>
+<body>
+   <p id="demo"></p>
+   <button onclick="getRandomInt(1, 10)"> Generate a Random Number From 1 to 9 </button>
+
+   <script>
+      // minimum is included, maximum is excluded
+      function getRandomInt(min, max) {
+      var rand = Math.random();
+      var flr = Math.floor(rand * (5 - 10))  ;
+         document.getElementById("demo").innerHTML = "(10-1)) = "+(5 - 10)+"<br> random ="+ rand+"<br> random * (1 -10)=  "+rand * ( 5-10)+"<br> floor == "+flr+"";
+         //Math.floor(Math.random() * (max - min)) + min;
+      }
+   </script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<head>
+   <title> Try It Yourself </title>
+</head>
+<body>
+       <button onclick="getRandomInt(1, 255)"> click to chenge Bg Color </button>
+   <div id="grd" ></div>
+   	<p id="ans" ></p>
+   <script>getRandomInt(1,255)
+      function getRandomInt(min, max) {
+         var R = Math.floor(Math.random() * (max - min)) + min;
+         var G = Math.floor(Math.random() * (max - min)) + min;
+         var B = Math.floor(Math.random() * (max - min)) + min;
+         var R1 = Math.floor(Math.random() * (max - min)) + min;
+         var G1 = Math.floor(Math.random() * (max - min)) + min;
+         var B1 = Math.floor(Math.random() * (max - min)) + min;
+         var R2 = Math.floor(Math.random() * (max - min)) + min;
+         var G2 = Math.floor(Math.random() * (max - min)) + min;
+         var B2 = Math.floor(Math.random() * (max - min)) + min;
+         var deg = Math.floor(Math.random() * (360 - min)) + min;
+         document.querySelector("body").style.backgroundImage="linear-gradient("+deg+"deg,rgb("+R+","+G+","+B+"),rgb("+R1+","+G1+","+B1+"),rgb("+R2+","+G2+","+B2+")";
+      }
+   </script>
+   
+</body>
+</html>

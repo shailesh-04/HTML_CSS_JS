@@ -1,0 +1,38 @@
+<html>
+   <head>
+      <title>Basic Form Validation</title>
+      <script type="text/javascript">
+         function FormV()
+         {
+            var Name=document.f.input1.value;
+            var Pass=document.f.input2.value;
+            if(Name==null||Name=="")
+            {
+               alert("Name Can't Be Black..");
+               return false;
+            }
+            if(Pass==null||Pass=="")
+            {
+               alert("Password Can't Be Black..");
+               return false;
+            }
+            else if(Pass.length<8)
+            {
+               alert("Password Must Be At Least 8 Characters long");
+               return false;
+            }
+         }
+      </script>
+   </head>
+   <body>
+      <form name="f" mathod="post" action="#" onsubmit="return FormV()">
+         <h1>Login</h1>
+         <label>User Name:</label><input type="text" id="iptName" name="input1">
+         <br>
+         <label>Password &nbsp;:</label><input type="text" id="iptPass" name="input2">
+         <br><br>
+         <input type="submit" value="submit">
+      </form>
+      
+   </body>
+</html>

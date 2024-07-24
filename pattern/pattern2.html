@@ -1,0 +1,55 @@
+<html>
+    <head>
+        <title>Pattern 2</title>
+           </head>
+    <body style="background-color:black; color:black; ">
+        <div style="background-color:aliceblue; padding: 40px;">
+            <script>
+                var i,j;
+                for(i=1; i<=10; i++)
+                {
+                    for(j=1; j<=i; j++)
+                    {
+                        document.write("* ");
+                    }
+                    document.write("<br>");
+                }
+            
+            </script>
+     
+        </div>
+        <div style="background-color:antiquewhite; padding: 40px;">
+            <script>
+                var i,j;
+                for(i=10; i>=1; i--)
+                {
+                    for(j=1; j<=i; j++)
+                    {
+                        document.write("* ");
+                    }
+                    document.write("<br>");
+                }
+            
+            </script>
+        </div>
+        <div>
+            <script>
+                for(var i=1; i<=10; i--)
+                {
+                    for(var j=1; j<=i; j++)
+                    {
+                        if(j==i)
+                        {
+                            continue;
+                            document.write(j);
+                        }
+                        else
+                        {
+                            document.write(' ');
+                        }
+                    }
+                }
+            </script>
+        </div>
+    </body>
+</html>

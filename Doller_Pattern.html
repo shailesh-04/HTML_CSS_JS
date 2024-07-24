@@ -1,0 +1,34 @@
+<html>
+   <head>
+      <title>Doller Pattern in Javascript</title>
+      <script type="text/javascript">
+      function Pattern()
+      {
+         var num =Number(document.getElementById("iptNum").value);
+         for(var i=0; i<num; i++)
+         {
+            for(var j=0; j<i; j++)
+            {
+               if(i%2==0)
+               {
+                  document.write("$");
+               }
+               else
+               {
+                  document.write("#");
+               }
+               
+            }
+            document.write("<br>");
+         }
+      }
+      </script>
+   </head>
+   <body>
+      <input type="text" id="iptNum">
+      <br>
+      <br>
+      <button onclick="Pattern()">Pattern</button>
+      <p id="Out"></p>
+   </body>
+</html>

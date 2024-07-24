@@ -1,0 +1,18 @@
+
+   #Contenre{
+      min-height: 800px;
+      position: relative;
+   }
+   #Clock{
+      text-align: center;
+      font-size: 72px;
+      background-color: #333333;
+      color:#fff;
+      min-width: 380px;
+      padding: 10;
+      border-radius:10px;
+      position:absolute;
+      top:50px;
+      left: 50px;
+      transform: translate(-50%,-50%);
+   }

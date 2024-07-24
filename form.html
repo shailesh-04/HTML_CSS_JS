@@ -1,0 +1,251 @@
+<html>
+	<head>
+		<title>HTML CSS JS Form</title>
+		<style type="text/css">
+		body{
+			padding:0 ;
+			margin:0 0 30px 0;
+			text-align:center;
+			box-sizing:border-box;
+		}
+		h1{
+			padding:20px 0 10px 0;
+			margin: 0 auto;
+		}
+		form{
+			margin:0 auto;
+			max-width:650px;
+			border-radius:5px;
+			background-color:#dfdfff;
+			padding:30px 0px 30px 40px;
+		}
+		div{
+			text-align:left;
+			width:87%;
+			height:100px;
+			padding:20px;
+			border-radius:7px;
+			background-color:#dfefff;
+			border:1px solid black;
+			margin:20px 0px 0px 0px;
+		}
+		.FirstName ,.LastName {
+			margin:0 0 0 8px;
+			padding:10px 10px 1px 10px;
+			font-size:22px;
+			width:90%;
+			border-radius:3px;
+			border-style:none;
+			outline:none;
+			border-bottom:1px solid black;
+		}
+		#F:hover,#L:hover,#G:hover,#D:hover,#DD:hover,#B:hover{
+			border:2px solid #00ffff;
+		}
+		#G input{
+			display:inline-block;
+			outline:none;
+			margin:2px 0px 0px 0px;	
+		}
+		label {
+			letter-spacing:3;
+			font-size:22px;
+		}
+		input[type="radio"]:checked + label > span {
+			background: #0076ff;
+		}
+		#G label > span {
+		display: inline-block;
+		margin:2px 0px 0px 0px;
+		width: 15px;
+		height: 15px;
+		border: 3px solid #0076ff;
+		border-radius: 50%;
+		}
+		#D input{
+			width:40%;
+			font-size:16px;
+			padding:7px;
+			margin:13px 0px 0px 10px;
+			outline:none;
+			border-radius:4px;
+			background-color:#afffff;
+		}
+		#D input:hover{
+			background-color:#fff0ff;
+		}
+		#DD select {
+		width:40%;
+		font-size:16px;
+		padding:7px;
+		margin:13px 0px 0px 10px;
+		outline:none;
+		border-radius:4px;
+		background-color:#afffff;
+		}
+		#B #Button  {
+		width:60%;
+		height:60%;
+		font-size:16px;
+		padding:7px;
+		font-size:24px;
+		margin:13px 0px 0px 100px;
+		outline:none;
+		border-radius:4px;
+		border:6px solid #afffff;
+		}
+		#Button:hover{
+			color:red;
+		}
+		p{
+		 margin:0px 0px 40px 9px;
+		 font-size:18px;
+		}
+		</style>
+	</head>
+	<body>
+		<h1>HTML CSS JS</h1>
+		<form  action="https://script.google.com/macros/s/AKfycbx8HBTjrMlRz_yzmiTZWj6iQb7xexfs9LMhM3r_gbinRsrbkJyaNlfVHyaPAuNTXgo8Tg/exec" method="post" name="MyForm" >
+			<div id="F" > 
+				<label for="FistName">FirstName:</label><br><br>
+				<input type="text" class="FirstName" id="FirstName" name="Name1"   >
+				<p id="ans1"></p>
+			</div>
+			
+			<div id="L" >
+				<label for="LastName">LastName:</label><br><br>
+				<input type="text" class="LastName" id="LastName" name="Name2" >
+				<p id="ans2"></p>
+			</div>
+			<div id="G">
+					<h3 >Gender</h3>
+				<input type="radio" name="Gender" value="Male" id="Male" />
+				<label for="Male"><span></span> Male</label>
+				
+				<input type="radio" name="Gender" value="Female" id="Female" />
+				<label for="Female"><span></span> Femal </label>
+				<p id="ans3"></p>
+			</div>
+			<div id="D">
+				<label>Birth Date</label><br>
+				<input type="date" min="1-12-2000" max="1-1-2023" name="D_te" >
+				<p id="ans4"></p>
+			</div>
+			<div id="DD">
+				<label>Corse</label><br>
+				<select name="DropDown" >
+					<option value="Default" selected>Default</option>
+					<option value="B.C.A" > B.C.A</option>
+					<option value="B.A" >B.A</option>
+					<option value="B.Com" >B.Com</option>
+				</select>
+				<p id="ans5"></p>
+			</div>
+			<div id="B">
+				<input type="submit" value="Submit" onclick="return Validation()" id="Button" >
+			</div>
+		</form>
+		<script type="text/javascript">
+			var str1 = document.getElementById("ans1");
+			var str2 = document.getElementById("ans2");
+			var str3 = document.getElementById("ans3");
+			var str4 = document.getElementById("ans4");
+			var str5 = document.getElementById("ans5");
+			
+			var bdr1 = document.getElementById("F");
+			var bdr2 = document.getElementById("L");
+			var bdr3 = document.getElementById("G");
+			var bdr4 = document.getElementById("D");
+			var bdr5 = document.getElementById("DD");
+			var bdr6 = document.getElementById("B");
+			var btn = document.getElementById("Button");
+			
+			function Validation()
+			{			
+				var flag = 0;
+				var fName = document.MyForm.Name1.value;
+				var lName = document.MyForm.Name2.value;
+				var Gen = document.MyForm.Gender.value;
+				var Dt = document.MyForm.D_te.value;
+				var dropDown = document.MyForm.DropDown.value;
+				
+				if(fName == ""){
+					str1.innerHTML = "First Name Can't Not Be Black.."; 
+					str1.style.color="red";
+					bdr1.style.border="2px solid red";
+					flag = 1;
+				}
+				else
+				{
+					str1.innerHTML =  "[ √ ]"; 
+					str1.style.color="green";
+					str1.style.textShadow="1px 2px 3px green,1px 2px 3px green,1px 2px 3px green,1px 2px 3px green";				
+					bdr1.style.border="2px solid green";
+				}
+				if(lName == ""){
+					str2.innerHTML = "Last Name Can't Not Be Black.."; 
+					str2.style.color="red";
+					bdr2.style.border="2px solid red";
+					flag = 1;
+				}
+				else
+				{
+					str2.innerHTML =  "[ √ ]"; 
+					str2.style.color="green";
+					str2.style.textShadow="1px 2px 3px green,1px 2px 3px green,1px 2px 3px green,1px 2px 3px green";				
+					bdr2.style.border="2px solid green";
+				}
+				if(Gen == ""){
+					str3.innerHTML = "Gender Can't Not Be Black.."; 
+					str3.style.color="red";
+					bdr3.style.border="2px solid red";
+					flag = 1;
+				}
+				else
+				{
+					str3.innerHTML =  "[ √ ]"; 
+					str3.style.color="green";
+					str3.style.textShadow="1px 2px 3px green,1px 2px 3px green,1px 2px 3px green,1px 2px 3px green";				
+					bdr3.style.border="2px solid green";
+				}
+				if(Dt == ""){
+					str4.innerHTML = " Date Can't Not Be Black.."; 
+					str4.style.color="red";
+					bdr4.style.border="2px solid red";
+					flag = 1;
+				}
+				else
+				{
+					str4.innerHTML =  "[ √ ]"; 
+					str4.style.color="green";
+					str4.style.textShadow="1px 2px 3px green,1px 2px 3px green,1px 2px 3px green,1px 2px 3px green";				
+					bdr4.style.border="2px solid green";
+				}
+				if(dropDown == "Default"){
+					str5.innerHTML = "Select Your Course.."; 
+					str5.style.color="red";
+					bdr5.style.border="2px solid red";
+					flag = 1;
+				}
+				else
+				{
+					str5.innerHTML =  "[ √ ]"; 
+					str5.style.color="green";
+					str5.style.textShadow="1px 2px 3px green,1px 2px 3px green,1px 2px 3px green,1px 2px 3px green";				
+					bdr5.style.border="2px solid green";
+				}
+				if(flag == 0)
+				{
+;					btn.style.display="block";
+				}
+				else
+				{
+					btn.style.display="none";
+					btn.style.border="5px solid red";	
+					bdr6.style.border="2px solid red";
+				}
+				return false;
+			}	
+		</script> 
+	</body>
+</html>

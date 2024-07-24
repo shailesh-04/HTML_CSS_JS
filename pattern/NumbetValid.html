@@ -1,0 +1,41 @@
+<html>
+   <head>
+      <title>Number VAlidation In javascript</title>
+      <style type="text/css">
+        #Num{
+            outline:none;
+            border:none;
+            border-bottom:1px solid black;
+            border-width: 1px;
+         }
+      </style>
+   </head>
+   <body>
+      <h4>Number Validation</h4>
+      <script type="text/javascript">
+      function ValidNum()
+      {
+         var num = document.MyForm.Num.value;
+         if(isNaN(num))
+         {
+            document.getElementById("valid").innerHTML="Enter Only Number......";
+            return false;
+         }
+         else
+         {
+         	if(num.length<=10)
+         	{
+         		alert("Please Enter Proper Number");
+         	}
+         }
+      }
+      </script>
+      <form name="MyForm" onsubmit="return ValidNum()">
+         <label>Number:</label>
+         <input type="text" name="Num" placeholder="Enter Your Number.."><br>
+         <span id="valid" style="color:red;"></span>
+         <br>
+         <input type="submit" value="submit">
+      </form>
+   </body>
+</html>

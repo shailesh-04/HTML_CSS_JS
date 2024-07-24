@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Input Box In _redius-BGcolor-width</title>
+	<style>
+	body{
+		width: 100%;
+		height: 100vh;
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex-direction: column;
+		gap: 20px;
+	}
+		.box{
+			width: 200px;
+			height: 250px;
+			background: #555;
+			border: 1px solid #999;
+			transition: .6s;
+		}
+	</style>
+</head>
+<body>
+	<div class="box"></div>
+	<input type="text">
+</body>
+<script>
+	let box = document.querySelector(".box"),
+		 input = document.querySelector("input");
+	input.addEventListener("input", () =>{
+		box.style.borderRadius = input.value;
+		box.style.width = input.value;
+		box.style.backgroundColor = input.value;
+	});
+</script>
+</html>

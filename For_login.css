@@ -1,0 +1,57 @@
+*{
+   padding: 0;
+   margin: 0;
+   box-sizing:border-box ;
+}
+body{
+   display: flex;
+   background-color: #aad1db;
+   align-items:center;
+   justify-content: center;
+}
+#pass{
+   background-color: green;
+}
+#eamail{
+   background-color: red;
+}
+.Login{
+   padding: 10px;
+   background-color: #02aed8;
+   border: 2px solid pink;
+   border-radius: 8px;
+   width: 300px;
+   margin:10px 0px ;
+}
+.Login span:nth-child(1){
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100px;
+   height: 3px;
+   background-image:linear-gradient(to right,transparent,#17f3fd );
+  	animation:anim 2s inear infinite;
+   }
+@keyframes anim
+{
+   0%{
+      transform: translateX(-100);
+   }
+   100%{
+      transform: translateX(100);
+   }
+}
+.Hadder{
+   background-color: red;
+   color: white;
+   padding: 5px;
+   text-align:center;
+}
+.sub{
+   background-color:red;
+   font-weight:bold;
+   padding:7px 40px 7px 40px;
+   margin:10px 70px;
+   border-radius: 5px;
+   
+}

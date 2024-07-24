@@ -1,0 +1,60 @@
+<html>
+   <head>
+      <title>Valid Form</title>
+      <style type="text/css">
+      #inputPass {
+      position:absolute;
+      top:30px;
+      outline: none;
+      padding: 10px;
+      border: none;
+      border-bottom: 2px solid #0076ff;
+      }
+      label:hover {
+      top:10px;
+      }
+      label {
+      position:absolute;
+      top:40px;
+      left:15px;
+      color:rgba(0,5,2,0.4);
+      transition-duration:s1;
+      }
+      .submit
+      {
+      	position:relative;
+      	top:100px;
+      }
+      </style>
+
+   </head>
+   <body bgcolor="yellow">
+      <form name="Form" onsubmit="return Valid()">
+         <input name="Password" id="inputPass"type="password">
+         <label>Password</label>
+      </a>   <br><br>
+         <input class="submit"  type="submit" value="Submit">
+      </form>
+      <script type="text/javascript">
+      function show(){
+      alert(shailesh);
+      }
+      function Valid()
+      {
+         var pass = document.Form.Password.value;
+       //   var OnlyNumber = /^\(?([0-9]{3})\)?[-. ]?([0-9]{3})[-. ]?([0-9]{4})$/;
+        // if(Password.match(OnlyNumber))
+         if(pass==""||pass==null)
+         {
+            alert("Not Accept Password..");
+            return false;
+         } 
+         else{
+         
+         alert("Passwoed Is Accept");         
+         return true;
+         }
+         }
+      </script>
+   </body>
+</html>
