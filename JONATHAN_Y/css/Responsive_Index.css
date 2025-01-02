@@ -1,0 +1,167 @@
+
+@media (max-width:1800px) {
+    .Trending > main,.shop-outdoor > main {
+        grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    }
+    .popular > div > div{
+        width: auto;
+        flex: 1 0 330px;
+    }
+    .TABLE-LAMPS > main{
+        justify-content: center;
+    }
+    .TABLE-LAMPS > main > div{
+        flex: 1 0 300px;
+        max-width: 450px;
+    }
+    @media (max-width:1440px) {
+        .overview > main > div{
+            width: 100%;
+        }
+        @media (max-width:1025px) {
+            
+            .navbar{
+                gap: 0px;
+            }
+            .nav-item{
+                padding: 20px 10px;
+            
+            }
+            @media (max-width:900px) {
+                .header-dectop{
+                    display: none;
+                }
+                .header-mobile{
+                    display: flex;
+                    padding: 20px 10px;
+                }
+                .header-mobile > .icon{
+                    gap: 15px;
+                    
+                }
+                @media (max-width:800px){
+
+                    .TABLE-LAMPS > main > div{
+                        flex: 1 0 300px;
+                        max-width: 100%;
+                    }
+
+                    footer .sineup > div{
+                        flex-direction: column;
+                        gap: 30px;
+                    }
+                    footer  main {
+                        flex-direction: column;
+                        gap: 50px;
+                        align-items: start;
+                    }
+                    @media (max-width:760px) {
+                        .overview > main{
+                            flex-direction: column;
+                        }
+                        @media (max-width:730px) {
+                        
+                            .popular{
+                                flex-direction: column;
+                            }
+                            footer  main  .Links{
+                                flex-direction: column;
+                                align-items: center;
+                                gap: 30px;
+
+                                &  > div{
+                                    width: 100%;
+                                    padding: 0 30px;
+                                }
+                                & .dd {
+                                    display: flex;
+                                    justify-content: space-between;
+                                    width: 100%;
+                                    padding: 20px 0;
+                                    border-top: 1px solid #999;
+                                    border-bottom: 1px solid #999;
+                                    & i{
+                                        display: block;
+                                        font-size: 30px;
+                                    }
+
+                                }
+                                
+                            }
+                            footer main .Links > div > div:hover i{
+                                transform: rotate(180deg);
+                            }
+                            footer main .Links > div:hover .dd-item
+                            { 
+                                max-height: 1000px; /* Adjust to a reasonably large value */
+                            }
+                            
+                            footer main .Links > div .dd-item {
+                                max-height: 0;
+                                overflow: hidden;
+                                transition: max-height 0.5s ease-in-out;
+                            }
+                            @media (max-width:600px) {
+                                footer .contact{
+                                    display: flex;
+                                    width: 100%;
+                                    justify-content: center;
+                                }
+                                @media (max-width:550px) {
+                                .overview > main{
+                                    width: 100%;
+                                    flex-direction: row !important; 
+                                    justify-content: start;
+                                    overflow-y: hidden;
+                                    overflow-x: scroll;
+                                }
+                                .overview > main > div{
+                                    min-width: 100%;
+                                }
+
+                                .Trending > main,.shop-outdoor > main{
+                                    display:flex;
+                                    justify-content: start;
+                                    overflow-y: hidden;
+                                    overflow-x: scroll;
+                                }
+                                .Trending > main > div,.shop-outdoor > main > div{
+                                    min-width: 200px;
+                                }
+                                .TABLE-LAMPS > main{
+                                    flex-direction: column;
+                                    width: 100%;
+                                    gap: 50px;
+                                    
+                                }
+
+                                    @media (max-width:500px) {
+                                        .top-item{
+                                            overflow-x: scroll;
+                                        }
+                                        .top-item a{
+                                            min-width: 300px;
+                                        }
+                                        footer .sineup > div > div{
+                                            flex-direction: column;
+                                            gap: 30px;
+                                        }
+                                    }
+                                }
+                            }
+                            
+                        }
+                    }
+                }
+            }
+        
+        }
+    }
+}
+
+.text{
+    position: absolute;
+    top: 0;
+    left: 0;
+     
+}

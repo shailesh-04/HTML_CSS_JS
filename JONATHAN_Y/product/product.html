@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- boxicon -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    
+     <!-- Slick Slider CSS -->
+     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css"/>
+     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css"/>
+
+    <title>Document</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header class="container-fluid border p-4 g-0">
+        hrder
+
+    </header>
+    <section class="main container-fluid g-0">
+        <main class="product_detail container-xxl g-0">
+            <span class="blurText">Home/ALL/Pendants</span>
+            <div class=" product_detail-box row gap-5 gap-lg-2 g-0 mt-3 ">
+                <!-- image_view -->
+                <div class="image_view col-12 col-md-6">
+                    <div class="h-auto position-sticky top-0" id="image-view-box-scrolable">
+                        <div class="slider-for">
+                            <div><img src="./img/mainsider1.webp" alt="Slide 1"></div>
+                            <div><img src="./img/mainsider2.webp" alt="Slide 1"></div>
+                            <div><img src="./img/mainsider3.webp" alt="Slide 1"></div>
+                            <div><img src="./img/img4.webp" alt="Slide 1"></div>
+                            <div><img src="./img/img5.webp" alt="Slide 1"></div>
+                            <div><img src="./img/img7.jpg" alt="Slide 1"></div>
+                            <div><img src="./img/img8.webp" alt="Slide 1"></div>
+                            <div><img src="./img/img10.webp" alt="Slide 1"></div>
+                            <div><img src="./img/img11.webp" alt="Slide 1"></div>
+                            
+                        </div>
+                        <div class="slider-nav">
+                            <div><img src="./img/mainsider1.webp" alt="Slide 1"></div>
+                            <div><img src="./img/mainsider2.webp" alt="Slide 1"></div>
+                            <div><img src="./img/mainsider3.webp" alt="Slide 1"></div>
+                            <div><img src="./img/img4.webp" alt="Slide 1"></div>
+                            <div><img src="./img/img5.webp" alt="Slide 1"></div>
+                            <div><img src="./img/img7.jpg" alt="Slide 1"></div>
+                            <div><img src="./img/img8.webp" alt="Slide 1"></div>
+                            <div><img src="./img/img10.webp" alt="Slide 1"></div>
+                            <div><img src="./img/img11.webp" alt="Slide 1"></div>
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- detail_view -->
+                <div class="detail_view col-12 col-md-5 px-sm-3">
+                    <div class="d-grid gap-3">
+                        <div>
+                            <h3>Jense 23.75" Minimalist Modern Metal </h3>
+                            <h3>Adjustable Dimmable Ring LED Pendant</h3>
+                        </div>
+                        <span class="blurText">SKU: JYL7151B</span>
+                        <div class="price d-flex justify-content-between">
+                            <div class=" d-flex gap-3">
+                                <h5>$363.99 </h5>
+                                <h5 class="blurText text-decoration-line-through">$363.99 </h5>
+                            </div>
+                            <p class="blurText text-decoration-underline">WRITE A REVIEW</p>
+                        </div>
+                        <div class="color">
+                            <p>COLOR : BLACK</p>
+                            <div class="img-container d-flex gap-3">
+                                <div class="" style=" cursor: pointer;"><img src="./img/main.webp" alt="BLACK"></div>
+                                <div class="" style=" cursor: pointer;"><img src="./img/main-wite.webp" alt="WHITR"></div>
+                            </div>
+                        </div>
+                        <hr >
+                        <span class="blurText small-text">4 interest-free installments, or from $32.85/mo with <span style="color: blue; font-size:15px;">shppay</span>Check your purchasing power</span>
+                        <div class="     border d-flex gap-2 ">
+                            <div class=" w-25 d-flex align-items-center justify-content-center">
+                                <input type="number" id="no_of_cart" class=" w-100 h-100 outline-0 fs-5 border-0 ps-4"  min="1" value="1" oninput="checkValue()" >
+                                <div class="">
+                                    <i class="bx bxs-up-arrow" onclick="document.querySelector('#no_of_cart').value = document.querySelector('#no_of_cart').value==''?1: parseInt(document.querySelector('#no_of_cart').value) + 1;"></i>
+                                    <i class='bx bxs-down-arrow' onclick="decresevalue()"></i>
+                                </div>
+                            </div>
+                            <button type="button" class="border-0 w-100 p-2 fs-5" style="background: #091f40; color:#fff;">ADD TO CART</button>
+                        </div>
+                        <div class="info p-5 ">
+                            <p>Our minimalist, integrated LED ring pendant features an up and down light to c
+                                reate the perfect ceiling fixture. Suspended by three cables, the light ri
+                                ng adjusts from flush mount to hanging pendant with an easy downward pull. Flood the roo
+                                m with ambient, warm light or use the dimmab
+                                le LEDs for mood lighting in the living room, dining room, bedroom or home office
+                                see more</p>
+                        </div>
+                        <div class="dd-item-detail d-grid gap-3">
+                            <div class="dd-item">
+                                <div class="dd-header">
+                                    <h6>DESCRIPTION</h6>
+                                    <p><i class="bx bx-chevron-down fs-4"></i></p>
+                                </div>
+                                <p class="dd-open">
+                                    RETURNS: We want you to be happy with your purchase! Eligible items can be returned within 30 days of receiving your purchase. We will provide a pre-paid label to return the item(s). Once the item(s) are returned to our warehouse, we will send you a refund for the amount paid for each item returned, minus $10 return shipping fee per each item. Pre-paid labels are only provided for customers from 48 contiguous United States (does not include Alaska, Hawaii, or any U.S. territories). We do not refund original shipping charges. Please email us at cs@jonthany.com to receive the return label.
+                                </p>
+                            </div>
+                            <div class="dd-item">
+                                <div class="dd-header">
+                                    <h6>SHIPPING & RETURNS</h6>
+                                    <p><i class="bx bx-chevron-down fs-4"></i></p>
+                                </div>
+                                <p class="dd-open">
+                                    RETURNS: We want you to be happy with your purchase! Eligible items can be returned within 30 days of receiving your purchase. We will provide a pre-paid label to return the item(s). Once the item(s) are returned to our warehouse, we will send you a refund for the amount paid for each item returned, minus $10 return shipping fee per each item. Pre-paid labels are only provided for customers from 48 contiguous United States (does not include Alaska, Hawaii, or any U.S. territories). We do not refund original shipping charges. Please email us at cs@jonthany.com to receive the return label.
+                                </p>
+                            </div>
+                            <div class="dd-item">
+                                <div class="dd-header">
+                                    <h6>DETAILS & DIMENSIONS</h6>
+                                    <p><i class="bx bx-chevron-down fs-4"></i></p>
+                                </div>
+                                <div class="dd-open">
+                                    <ul>
+                                        <li>Length:23.75in</li>
+                                        <li>Width:23.75in</li>
+                                        <li>Height:4-63in</li>
+                                        <li>Weight:4-63lbs</li>
+                                        <h6>PRODUCT DETAILS</h6>
+                                        <ul style="list-style-type:disc;">
+                                            <li>This modern light fixture has a clean, black finish</li>
+                                            <li>Transitional, maintenance-free integrated LED light fixture lasts 15 years; no bulbs to replace</li>
+                                            <li>Perfect for industrial style spaces, this ring light can adjust to fit your ceiling height</li>
+                                            <li>Eco-friendly 0W LED bulb included</li>
+                                            <li>Takes 0 bulbs and compatible with 60W</li>
+                                            <li>Color Temperature: 3000K</li>
+                                        </ul>
+                            
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="dd-item">
+                                <div class="dd-header">
+                                    <h6>CARE INSTRUCTIONS</h6>
+                                    <p><i class="bx bx-chevron-down fs-4"></i></p>
+                                </div>
+                                <div class="dd-open">
+                                    <ul>
+                                        <li>Before cleaning any lamp shade or fixture, disconnect the power source. Wipe with a soft, dry cloth. Avoid the use of chemicals and household cleaners as they may damage the finish.</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="dd-item">
+                                <div class="dd-header">
+                                    <h6>REVIEWS</h6>
+                                    <p><i class="bx bx-chevron-down fs-4"></i></p>
+                                </div>
+                                <div class="dd-open">
+                                    <span>Powered by</span>
+                                    <hr>
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="d-grid">
+                                            <span>
+                                                <i class='bx bx-star'></i>
+                                                <i class='bx bx-star'></i>
+                                                <i class='bx bx-star'></i>
+                                                <i class='bx bx-star'></i>
+                                                <i class='bx bx-star'></i>
+                                            </span>
+                                            <span>0 Questions \ 0 Answers</span>
+                                        </div>
+                                        <div class="d-grid mt-5 gap-3">
+                                            <button class="border-0 text-white" style="background: #6A6C77;"> <i class='bx bx-edit' ></i>WRITE A REVIEW</button>
+                                            <button class="border-0 text-white"  style="background: #6A6C77;"><i class='bx bx-chat'></i>ASK A QUESTION</button>
+                                        </div>
+                                        
+                                    </div>
+                                    <div class="d-flex gap-2">
+                                        <div class="dd-item-review-active">Reviews (0)</div>
+                                        <div>Questions (0)</div>
+                                    </div>
+                                    <hr class="mt-1">
+                                        <div class="review-box-open text-center mt-5 ">
+                                            <i class='bx bxs-star' ></i>
+                                            <i class='bx bxs-star' ></i>
+                                            <i class='bx bxs-star' ></i>
+                                            <i class='bx bxs-star' ></i>
+                                            <i class='bx bxs-star' ></i>
+                                        </div>
+                                    <div class="text-center mt-3"><button class="border-0 p-1 text-white" style="background: #6A6C77; " >BE THE FIRST TO WRITE A REVIEW</button></div>
+                                    
+                                </div>
+                            </div>
+                        </div>  
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- SIMILAR_STYLE -->
+        <div class="similar_style g-0 h-50">
+            <div class="box container-xxl g-0  my-5">
+                <div class="row">
+                    <div class="px-3 px-md-4 px-lg-5">
+                        <h6 class="ps-xxl-3 p-2">SIMILAR STYLE</h6>
+                        <div class="multiple-items">
+                            <div class="">
+                                <img src="./img/img10.webp" class="img-fluid" alt="Image 1">
+                                <div class="small-imagis d-flex gap-2 mt-2">
+                                    <div class=""><img src="./img/img1.webp" alt=""></div>
+                                    <div class=""><img src="./img/img9.webp" alt=""></div>
+                                    <div class=""><img src="./img/img4.webp" alt=""></div>
+                                </div>
+                                <div class="mt-1">Lorem ipsum, dolort amet consec adipisi</div>
+                                <div class="mt-xxl-1">$40.50</div>
+                            </div>
+                            <div>
+                                <img src="./img/img11.webp" class="img-fluid" alt="Image 2">
+                                <div class="small-imagis d-flex gap-2 mt-2">
+                                    <div class=""><img src="./img/img1.webp" alt=""></div>
+                                    <div class=""><img src="./img/img9.webp" alt=""></div>
+                                    <div class=""><img src="./img/img4.webp" alt=""></div>
+                                </div>
+                                <div class="mt-1">Lorem ipsum, dolort amet consec adipisi</div>
+                                <div class="mt-xxl-1">$40.50</div>
+                            </div>
+                            <div>
+                                <img src="./img/img1.webp" class="img-fluid" alt="Image 3">
+                                <div class="small-imagis d-flex gap-2 mt-2">
+                                    <div class=""><img src="./img/img1.webp" alt=""></div>
+                                    <div class=""><img src="./img/img9.webp" alt=""></div>
+                                    <div class=""><img src="./img/img4.webp" alt=""></div>
+                                </div>
+                                <div class="mt-1">Lorem ipsum, dolort amet consec adipisi</div>
+                                <div class="mt-xxl-1">$40.50</div>
+                            </div>
+                            <div>
+                                <img src="./img/img2.webp" class="img-fluid" alt="Image 4">
+                                <div class="small-imagis d-flex gap-2 mt-2">
+                                    <div class=""><img src="./img/img1.webp" alt=""></div>
+                                    <div class=""><img src="./img/img9.webp" alt=""></div>
+                                    <div class=""><img src="./img/img4.webp" alt=""></div>
+                                </div>
+                                <div class="mt-1">Lorem ipsum, dolort amet consec adipisi</div>
+                                <div class="mt-xxl-1">$40.50</div>
+                            </div>
+                            <div>
+                                <img src="./img/img3.webp" class="img-fluid" alt="Image 5">
+                                <div class="small-imagis d-flex gap-2 mt-2">
+                                    <div class=""><img src="./img/img1.webp" alt=""></div>
+                                    <div class=""><img src="./img/img9.webp" alt=""></div>
+                                    <div class=""><img src="./img/img4.webp" alt=""></div>
+                                </div>
+                                <div class="mt-1">Lorem ipsum, dolort amet consec adipisi</div>
+                                <div class="mt-xxl-1">$40.50</div>
+                            </div>
+                            <div>
+                                <img src="./img/img4.webp" class="img-fluid" alt="Image 6">
+                                <div class="small-imagis d-flex gap-2 mt-2">
+                                    <div class=""><img src="./img/img1.webp" alt=""></div>
+                                    <div class=""><img src="./img/img9.webp" alt=""></div>
+                                    <div class=""><img src="./img/img4.webp" alt=""></div>
+                                </div>
+                                <div class="mt-1">Lorem ipsum, dolort amet consec adipisi</div>
+                                <div class="mt-xxl-1">$40.50</div>
+                            </div>
+                            <div>
+                                <img src="./img/img5.webp" class="img-fluid" alt="Image 6">
+                                <div class="small-imagis d-flex gap-2 mt-2">
+                                    <div class=""><img src="./img/img1.webp" alt=""></div>
+                                    <div class=""><img src="./img/img9.webp" alt=""></div>
+                                    <div class=""><img src="./img/img4.webp" alt=""></div>
+                                </div>
+                                <div class="mt-1">Lorem ipsum, dolort amet consec adipisi</div>
+                                <div class="mt-xxl-1">$40.50</div>
+                            </div>
+                            <div>
+                                <img src="./img/img6.webp" class="img-fluid" alt="Image 6">
+                                <div class="small-imagis d-flex gap-2 mt-2">
+                                    <div class=""><img src="./img/img1.webp" alt=""></div>
+                                    <div class=""><img src="./img/img9.webp" alt=""></div>
+                                    <div class=""><img src="./img/img4.webp" alt=""></div>
+                                </div>
+                                <div class="mt-1">Lorem ipsum, dolort amet consec adipisi</div>
+                                <div class="mt-xxl-1">$40.50</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recently_Viewed_Products -->
+        <div class="similar_style g-0 h-50">
+            <div class="box container-xxl g-0  my-5">
+                <div class="row">
+                    <div class="px-3 px-md-4 px-lg-5">
+                        <h6 class="ps-xxl-3 p-2">SIMILAR STYLE</h6>
+                        <div class="multiple-items">
+                            <div class="">
+                                <img src="./img/img10.webp" class="img-fluid" alt="Image 1">
+                                <div class="small-imagis d-flex gap-2 mt-2">
+                                    <div class=""><img src="./img/img1.webp" alt=""></div>
+                                    <div class=""><img src="./img/img9.webp" alt=""></div>
+                                    <div class=""><img src="./img/img4.webp" alt=""></div>
+                                </div>
+                                <div class="mt-1">Lorem ipsum, dolort amet consec adipisi</div>
+                                <div class="mt-xxl-1">$40.50</div>
+                            </div>
+                            <div>
+                                <img src="./img/img11.webp" class="img-fluid" alt="Image 2">
+                                <div class="small-imagis d-flex gap-2 mt-2">
+                                    <div class=""><img src="./img/img1.webp" alt=""></div>
+                                    <div class=""><img src="./img/img9.webp" alt=""></div>
+                                    <div class=""><img src="./img/img4.webp" alt=""></div>
+                                </div>
+                                <div class="mt-1">Lorem ipsum, dolort amet consec adipisi</div>
+                                <div class="mt-xxl-1">$40.50</div>
+                            </div>
+                            <div>
+                                <img src="./img/img1.webp" class="img-fluid" alt="Image 3">
+                                <div class="small-imagis d-flex gap-2 mt-2">
+                                    <div class=""><img src="./img/img1.webp" alt=""></div>
+                                    <div class=""><img src="./img/img9.webp" alt=""></div>
+                                    <div class=""><img src="./img/img4.webp" alt=""></div>
+                                </div>
+                                <div class="mt-1">Lorem ipsum, dolort amet consec adipisi</div>
+                                <div class="mt-xxl-1">$40.50</div>
+                            </div>
+                            <div>
+                                <img src="./img/img2.webp" class="img-fluid" alt="Image 4">
+                                <div class="small-imagis d-flex gap-2 mt-2">
+                                    <div class=""><img src="./img/img1.webp" alt=""></div>
+                                    <div class=""><img src="./img/img9.webp" alt=""></div>
+                                    <div class=""><img src="./img/img4.webp" alt=""></div>
+                                </div>
+                                <div class="mt-1">Lorem ipsum, dolort amet consec adipisi</div>
+                                <div class="mt-xxl-1">$40.50</div>
+                            </div>
+                            <div>
+                                <img src="./img/img3.webp" class="img-fluid" alt="Image 5">
+                                <div class="small-imagis d-flex gap-2 mt-2">
+                                    <div class=""><img src="./img/img1.webp" alt=""></div>
+                                    <div class=""><img src="./img/img9.webp" alt=""></div>
+                                    <div class=""><img src="./img/img4.webp" alt=""></div>
+                                </div>
+                                <div class="mt-1">Lorem ipsum, dolort amet consec adipisi</div>
+                                <div class="mt-xxl-1">$40.50</div>
+                            </div>
+                            <div>
+                                <img src="./img/img4.webp" class="img-fluid" alt="Image 6">
+                                <div class="small-imagis d-flex gap-2 mt-2">
+                                    <div class=""><img src="./img/img1.webp" alt=""></div>
+                                    <div class=""><img src="./img/img9.webp" alt=""></div>
+                                    <div class=""><img src="./img/img4.webp" alt=""></div>
+                                </div>
+                                <div class="mt-1">Lorem ipsum, dolort amet consec adipisi</div>
+                                <div class="mt-xxl-1">$40.50</div>
+                            </div>
+                            <div>
+                                <img src="./img/img5.webp" class="img-fluid" alt="Image 6">
+                                <div class="small-imagis d-flex gap-2 mt-2">
+                                    <div class=""><img src="./img/img1.webp" alt=""></div>
+                                    <div class=""><img src="./img/img9.webp" alt=""></div>
+                                    <div class=""><img src="./img/img4.webp" alt=""></div>
+                                </div>
+                                <div class="mt-1">Lorem ipsum, dolort amet consec adipisi</div>
+                                <div class="mt-xxl-1">$40.50</div>
+                            </div>
+                            <div>
+                                <img src="./img/img6.webp" class="img-fluid" alt="Image 6">
+                                <div class="small-imagis d-flex gap-2 mt-2">
+                                    <div class=""><img src="./img/img1.webp" alt=""></div>
+                                    <div class=""><img src="./img/img9.webp" alt=""></div>
+                                    <div class=""><img src="./img/img4.webp" alt=""></div>
+                                </div>
+                                <div class="mt-1">Lorem ipsum, dolort amet consec adipisi</div>
+                                <div class="mt-xxl-1">$40.50</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</body>
+<script src="./script.js"></script>
+<!-- jQuery -->
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<!-- Bootstrap JS -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<!-- Slick Slider JS -->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+<script>
+    document.querySelector("header").innerHTML=window.innerWidth;
+    $(document).ready(function() {
+            $('.slider-for').slick({
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: true,
+                fade: true,
+                asNavFor: '.slider-nav',
+                prevArrow: '<button class="slick-prev"><i class="bx bx-left-arrow-alt"></i></button>',
+                nextArrow: '<button class="slick-next"><i class="bx bx-right-arrow-alt"></i></button>'
+            });
+            $('.slider-nav').slick({
+                slidesToShow: 5,
+                slidesToScroll: 1,
+                asNavFor: '.slider-for',
+                dots: true,
+                centerMode: false,
+                focusOnSelect: true
+            });
+        });
+
+        $(document).ready(function () {
+  $('.multiple-items').slick({
+    infinite: true,
+    slidesToShow: 4,
+    slidesToScroll: 4,
+    responsive: [
+      {
+        breakpoint: 1024, // Screens smaller than 1024px
+        settings: {
+          slidesToShow: 3,
+          slidesToScroll: 3,
+        },
+      },
+      {
+        breakpoint: 768, // Screens smaller than 768px
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+        },
+      },
+    ],
+  });
+});
+
+</script>
+</html>

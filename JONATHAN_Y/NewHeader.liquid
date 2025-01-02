@@ -1,0 +1,959 @@
+{% style %}
+  .header-box{
+    position: sticky;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+.header-dectop,.header-mobile{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 35px;
+    background: #fff;    
+    position: relative;
+    & > img{
+        width: 170px;
+        height: 100%;
+    }
+    & .icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 30px;        
+    }
+    & .icon > a,i{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        color: #000;
+        font-size: 25px;
+        text-decoration: none;
+        & i{
+            font-size: 15px;
+            transform: scale(1.8);
+        }
+    }
+} 
+@keyframes example-small {
+    from 
+    {
+        transform: translateX(110%);
+        
+    }
+    to {
+        width: 100%;
+        transform: translateX(0%);
+    }
+}
+@keyframes example {
+    from 
+    {
+        transform: translateX(110%);
+    }
+    to {
+        transform: translateX(0%);
+    }
+}
+@keyframes example-close{
+    from 
+    {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(110%);
+    }
+}
+.header-mobile{
+    display: none;   
+    & .sidebar{
+        position: fixed;
+        right: 0;
+        top: 0;
+        width: 100%;
+        height:100vh;
+        background: #00000088;
+        display: none;
+        justify-content: end;
+        z-index: 100;
+
+        & .sidebar-items {
+            width:400px;
+            height: 100vh;
+            padding: 35px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 20px;
+            background: white;
+            animation-name: example;
+            animation-fill-mode: forwards;
+            animation-duration: .5s;
+            overflow-x: hidden;
+            overflow-y: scroll;
+           & .acount{
+            width: 100%;
+            background-color: #efe6e1;
+            border-radius: 1px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            padding:30px;
+            margin-top: 50PX;
+            & > a{
+                color: #000;
+                text-decoration: none;
+                
+            }
+           }
+           & .head{
+            display: flex;
+            width: 100%;
+            align-items: center;
+            justify-content: space-between;
+            & img{
+                width: 100%;
+                height: 100%;
+            }
+            & > a{
+                display: inline-block;
+                width: 150px;
+            }
+        }
+            .container{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transform: translateX(0%);
+                animation-name: example-small;
+                animation-fill-mode: forwards;
+                animation-duration: .5s;
+                gap: 20px;
+                & .sidebar-item{
+                    width: 100%;
+                    min-height: 115px;
+                    background-color: #efe6e1;
+                    border-radius: 1px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: space-between;
+                    padding: 0 20px;
+                    & img{
+                        width: 100%;
+                        height: 100%
+                    }
+                    & > div{
+                        width: 70px;
+                    }
+                }
+            }
+        }
+    }
+}
+@keyframes rev-container {
+    from 
+    {
+        transform: translateX(-110%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes open-box {
+    from 
+    {
+        transform: translateX(110%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+@keyframes close-box {
+    from 
+    {
+        transform: translateX(0%);
+    }
+    to {
+        transform: translateX(110);
+    }
+}
+.container-item{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    flex-direction: column;
+    transform: translateX(0%);
+    animation-name: open-box;
+    animation-fill-mode: forwards;
+    animation-duration: .5s;
+    & img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+    .img-box{
+        margin-top: 20px;
+        display: flex;
+        gap: 20px;
+        & a{
+            text-decoration: underline solid #000; 
+        }
+    }
+    
+    & .links{
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        /* border: 1px solid red; */
+        gap: 30px;
+        & .dd-link{
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+        & .dd-link-open{
+            justify-content: start !important;
+            flex-direction: row-reverse !important;
+            border-top: 2px solid #000;
+            border-bottom: 2px solid #000;
+            padding: 10px 0 !important;
+            transition: all .5s;
+            & i{
+                transform: rotate(180deg);
+            }
+        }
+        & .dd{
+            gap: 10px;
+            width: 90%;
+            overflow: hidden;
+            display: none;
+            flex-direction: column;
+        }
+
+    }
+
+    & a{
+        color: #000;
+        text-decoration: none;
+    }
+    & .sidebar-item{
+        width: 100%;
+        min-height: 115px;
+        background-color: #efe6e1;
+        border-radius: 1px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding: 0 20px;
+        & img{
+            width: 100%;
+            height: 100%
+        }
+        & > div{
+            width: 90px;
+        }
+    }
+}
+
+.sider-item-box{
+    width: 100%;
+    min-height: 115px;
+    background-color: #efe6e1;
+    border-radius: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 20px;
+    & img{
+        width: 100%;
+        height: 100%
+    }
+    & > div{
+        width: 70px;
+    }
+}
+
+
+.sidebar-items > .container > .image-slide{
+    width: 100%;
+    & video{
+        width: 100%;
+        height: 100%;
+        
+    }
+    & > .slide{
+        height:fit-content;
+        display: flex;
+        align-items: center;
+        gap: 30px;
+        justify-content: space-around;
+        overflow-x: scroll;
+        overflow-y: hidden;
+        margin-top: 30px;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none; 
+        & > div{
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            & > a{
+                color: #000;
+                text-decoration-color: #000;
+            }
+        }
+    }
+}
+
+.navbar-container{
+    display: flex;
+}
+
+.nav-item{
+    padding: 20px 15px;
+}
+.nav-item  a{
+    text-decoration: none;
+    color: #000;
+}
+.nav-item:hover{
+    background: #091f40;
+}
+.nav-item:hover > a{
+    color: #fff;
+}
+.navbar-container .nav-item .dropdown{
+    position: absolute;
+    top: 90%;
+    left: 0;
+    width: 100%;
+    cursor: pointer;
+    height: 530px;
+    background: #fff;
+    display: none;
+    padding-top: 30px;
+    border-top: 1px solid #efe6e1;
+    & img{
+        width: 100%;
+        height: 100%;
+    }
+    
+}
+.dropdown-image{
+  display:flex;
+  flex-direction:column;
+  align-items:start;
+  justify-content:center;
+    & > img{
+        width:100%;
+        height:100%;
+      object-fit:cover;
+    }
+    & > a{
+        text-decoration:underline solid;
+    }
+}
+.dropdown-image > div{
+  height:150px;    
+}
+.dropdown-links  div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px ;
+    & a{
+        transition:all .1s;
+    }
+    & a:hover{
+        color: orange;
+    }
+    & h4{
+        margin:10px 0;
+    }
+}
+.dropdown-links div span{
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border: 1px solid #444;
+    margin-right: 10px;
+}
+  .navbar-container .nav-item:hover .dropdown{
+    display:flex;
+  }
+
+@media (max-width:1800px) {
+    @media (max-width:1440px) {
+        @media (max-width:1025px) {
+            
+            .navbar-container{
+                gap: 0px;
+            }
+            .nav-item{
+                padding: 20px 10px;
+            
+            }
+            @media (max-width:900px) {
+                .header-dectop{
+                    display: none;
+                }
+                .header-mobile{
+                    display: flex;
+                    padding: 20px 10px;
+                }
+                .header-mobile > .icon{
+                    gap: 15px;
+                    
+                }
+              }
+            }
+        }
+    }
+  .link-box {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  height: 480px; /* 50% of the viewport height */
+  gap: 10px; /* Optional: adds space between items */
+}
+{% endstyle %}
+<section class="header-box">
+        <header class="header-mobile">
+            <img src="./assent/LOGO.webp" alt="">
+            <div class="icon">
+                <a href=""><i class='bx bx-search-alt-2'></i></a>
+                <i class='bx bxs-shopping-bag'></i>
+                <i class='bx bx-menu' id="sidebar-open" ></i>
+            </div>
+            <nav class="sidebar" id="sidebar">
+                <div class="sidebar-items position-[relative]">                  
+                    <div class="head">
+                        <i class='bx bx-left-arrow-alt display-[none]' id="revers"></i>
+                        <a href="" class="">
+                            <img src="./assent/LOGO.webp" alt="">
+                        </a>
+                        <i class='bx bx-x' id="sidebar-close"></i>
+                    </div>
+                    <!-- MAIN CONTAINRT -->
+                    <div class="container display-[flex]">
+                        <div class="sidebar-item" data-for="LIGHTING">
+                            <p>LIGHTING</p>
+                            <div>
+                                <img src="./assent/item1.webp" alt="" srcset="">
+                            </div>
+                        </div>
+                        <div class="sidebar-item" data-for="RUGS">
+                            <p>RUGS</p>
+                            <div>
+                                <img src="./assent/item1.webp" alt="" srcset="">
+                            </div>
+                        </div>
+                        <div class="sidebar-item" data-for="FURNITURE">
+                            <p>FURNITURE</p>
+                            <div>
+                                <img src="./assent/item1.webp" alt="" srcset="">
+                            </div>
+                        </div>
+                        <div class="sidebar-item" data-for="OUTDOOR">
+                            <p>OUTDOOR</p>
+                            <div>
+                                <img src="./assent/item1.webp" alt="" srcset="">
+                            </div>
+                        </div>                    
+                        <div class="image-slide">
+                            <p>SUSTAINABILITY</p>
+                            <div class="slide">
+                                <div>
+                                    <video class="home-video" src="./assent/slider-video1.mp4" autoplay muted loop playsinline></video>
+                                    <a href="">JONATHAN</a>
+                                </div>
+                                <div>
+                                    <video class="home-video" src="./assent/slider-video2.mp4" autoplay muted loop playsinline></video>
+                                    <a href="">JONATHAN</a>
+                                </div>
+                                <div>
+                                    <video class="home-video" src="./assent/slider-video3.mp4" autoplay muted loop playsinline></video>
+                                    <a href="">JONATHAN</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>    
+
+                    <!-- LIGHTING container -->
+                    <div class="container-item display-[none]" id="LIGHTING">
+                        <div class="sidebar-item">
+                            <p>LIGHTING</p>
+                            <div>
+                                <img src="./assent/item2.webp" alt="" srcset="">
+                            </div>
+                        </div>
+
+                        <a href="">et. Fusce </a>
+                        <a href="">ivamus lacin</a>
+
+                        <hr color="#efe6e1"/>
+                        <div class="links">
+                            <div class="dd-link ">
+                                <p>consectetur adip</p>
+                                <p><i class='bx bx-chevron-right'></i></p>
+                            </div>
+                            <div class="dd">
+                                <a href="">centuries</a>
+                                <a href="">eb pag</a>
+                                <a href="">em Ipsum</a>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <div class="dd-link">
+                                <p>consectetur adip</p>
+                                <p><i class='bx bx-chevron-right'></i></p>
+                            </div>
+                            <div class="dd">
+                                <a href="">centuries</a>
+                                <a href="">eb pag</a>
+                                <a href="">em Ipsum</a>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <div class="dd-link">
+                                <p>consectetur adip</p>
+                                <p><i class='bx bx-chevron-right'></i></p>
+                            </div>
+                            <div class="dd">
+                                <a href="">centuries</a>
+                                <a href="">eb pag</a>
+                                <a href="">em Ipsum</a>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <div class="dd-link">
+                                <p>consectetur adip</p>
+                                <p><i class='bx bx-chevron-right'></i></p>
+                            </div>
+                            <div class="dd">
+                                <a href="">centuries</a>
+                                <a href="">eb pag</a>
+                                <a href="">em Ipsum</a>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <div class="dd-link">
+                                <p>consectetur adip</p>
+                                <p><i class='bx bx-chevron-right'></i></p>
+                            </div>
+                            <div class="dd">
+                                <a href="">centuries</a>
+                                <a href="">eb pag</a>
+                                <a href="">em Ipsum</a>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <div class="dd-link">
+                                <p>consectetur adip</p>
+                                <p><i class='bx bx-chevron-right'></i></p>
+                            </div>
+                            <div class="dd">
+                                <a href="">centuries</a>
+                                <a href="">eb pag</a>
+                                <a href="">em Ipsum</a>
+                            </div>
+                        </div>
+                        
+                        <div class="img-box">
+                            <div>
+                                <img src="./assent/item2.webp" alt="" srcset="">
+                                <a href="">JONATHAN</a>
+                            </div>
+                            <div>
+                                <img src="./assent/item2.webp" alt="" srcset="">
+                                <a href="">JONATHAN</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RUGS -->
+                    <div class="container-item display-[none]" id="RUGS">
+                        <div class="sidebar-item">
+                            <p>RUNG</p>
+                            <div>
+                                <img src="./assent/item1.webp" alt="" srcset="">
+                            </div>
+                        </div>
+                        <a href="">et. Fusce </a>
+                        <a href="">ivamus lacin</a>
+                        <a href="">et. Fusce </a>
+                        <a href="">ivamus lacin</a>
+                        <a href="">et. Fusce </a>
+                        <a href="">ivamus lacin</a>
+                        <a href="">et. Fusce </a>
+                        <a href="">ivamus lacin</a>
+                        <a href="">et. Fusce </a>
+                        <a href="">ivamus lacin</a>
+                        <a href="">et. Fusce </a>
+                        <a href="">ivamus lacin</a>
+
+                        <hr color="#efe6e1"/>
+                        <div class="links">
+                            <div class="dd-link ">
+                                <p>consectetur adip</p>
+                                <p><i class='bx bx-chevron-right'></i></p>
+                            </div>
+                            <div class="dd">
+                                <a href="">centuries</a>
+                                <a href="">eb pag</a>
+                                <a href="">em Ipsum</a>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <div class="dd-link ">
+                                <p>consectetur adip</p>
+                                <p><i class='bx bx-chevron-right'></i></p>
+                            </div>
+                            <div class="dd">
+                                <a href="">centuries</a>
+                                <a href="">eb pag</a>
+                                <a href="">em Ipsum</a>
+                            </div>
+                        </div>
+                        <div class="img-box">
+                            <div>
+                                <img src="./assent/item2.webp" alt="" srcset="">
+                                <a href="">JONATHAN</a>
+                            </div>
+                            <div>
+                                <img src="./assent/item2.webp" alt="" srcset="">
+                                <a href="">JONATHAN</a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FFURNITURE-->
+                    <div class="container-item display-[none]" id="FURNITURE">
+                        <div class="sidebar-item">
+                            <p>FURNITURE</p>
+                            <div>
+                                <img src="./assent/item2.webp" alt="" srcset="">
+                            </div>
+                        </div>
+
+                        <a href="">et. Fusce </a>
+                        <a href="">ivamus lacin</a>
+
+                        <hr color="#efe6e1"/>
+                        <div class="links">
+                            <div class="dd-link ">
+                                <p>consectetur adip</p>
+                                <p><i class='bx bx-chevron-right'></i></p>
+                            </div>
+                            <div class="dd">
+                                <a href="">centuries</a>
+                                <a href="">eb pag</a>
+                                <a href="">em Ipsum</a>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <div class="dd-link ">
+                                <p>consectetur adip</p>
+                                <p><i class='bx bx-chevron-right'></i></p>
+                            </div>
+                            <div class="dd">
+                                <a href="">centuries</a>
+                                <a href="">eb pag</a>
+                                <a href="">em Ipsum</a>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <div class="dd-link ">
+                                <p>consectetur adip</p>
+                                <p><i class='bx bx-chevron-right'></i></p>
+                            </div>
+                            <div class="dd">
+                                <a href="">centuries</a>
+                                <a href="">eb pag</a>
+                                <a href="">em Ipsum</a>
+                            </div>
+                        </div>
+                        <div class="links">
+                            <div class="dd-link ">
+                                <p>consectetur adip</p>
+                                <p><i class='bx bx-chevron-right'></i></p>
+                            </div>
+                            <div class="dd">
+                                <a href="">centuries</a>
+                                <a href="">eb pag</a>
+                                <a href="">em Ipsum</a>
+                            </div>
+                        </div>
+                        <div class="img-box">
+                            <div>
+                                <img src="./assent/item2.webp" alt="" srcset="">
+                                <a href="">JONATHAN</a>
+                            </div>
+                            <div>
+                                <img src="./assent/item2.webp" alt="" srcset="">
+                                <a href="">JONATHAN</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- OUTDOOR-->
+                    <div class="container-item display-[none]" id="OUTDOOR">
+                        <div class="sidebar-item">
+                            <p>OUTDOOR</p>
+                            <div>
+                                <img src="./assent/item2.webp" alt="" srcset="">
+                            </div>
+                        </div>
+                        <div class="links">
+                            <div class="dd-link ">
+                                <p>consectetur adip</p>
+                                <p><i class='bx bx-chevron-right'></i></p>
+                            </div>
+                            <div class="dd">
+                                <a href="">centuries</a>
+                                <a href="">eb pag</a>
+                                <a href="">em Ipsum</a>
+                            </div>
+                        </div>
+                      <div class="links">
+                            <div class="dd-link ">
+                                <p>consectetur adip</p>
+                                <p><i class='bx bx-chevron-right'></i></p>
+                            </div>
+                            <div class="dd">
+                                <a href="">centuries</a>
+                                <a href="">eb pag</a>
+                                <a href="">em Ipsum</a>
+                            </div>
+                        </div>
+                        <a href="">sdfjg aweuihr vw</a>
+                        <a href="">sedfgiuwe qwerug</a>
+                        <div class="img-box">
+                            <div>
+                                <img src="./assent/item2.webp" alt="" srcset="">
+                                <a href="">JONATHAN</a>
+                            </div>
+                            <div>
+                                <img src="./assent/item2.webp" alt="" srcset="">
+                                <a href="">JONATHAN</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+
+                    <div class="acount">
+                        <a href="">signin</a>
+                        <a href="">create acount</a>
+                        <a href="">take oder</a>
+                    </div>  
+                    <div></div>
+                </div>
+
+                
+            </nav>
+        </header>
+
+        <header class="header-dectop">
+  <img src="{{ section.settings.logo | image_url }}" alt="Logo">
+  <div class="navbar-container">
+    
+    {% for link in linklists['mymenu'].links %}
+      <div class="nav-item">
+        <a href="{{ link.url }}">{{ link.title }}</a>
+        
+        {% assign flag = false %}
+        {% for block in section.blocks %}
+          {% if link.title == block.settings.for-link-title %}
+            {% assign flag = true %}
+            {% break %}
+          {% endif %}
+        {% endfor %}
+
+        {% if link.links.size > 0 or flag %}
+          {% assign flag = false %}
+        <div class="dropdown">
+          <div class="container-fluid g-0">
+            <div class="row g-0 w-100">
+              <div class="col-2">.</div>
+              <div class="col-6 link-box">
+                {% for link1 in link.links %}
+                  <div class="dropdown-links">
+                    <div style="margin-bottom:15px; h1"><a  style="font-weight:900;" href="#">{{ link1.title }}</a></div>
+                    <div>
+                      {% for link2 in link1.links %}
+                        <a href="{{ link2.url }}">{{ link2.title }}</a>
+                      {% endfor %}
+                    </div>
+                  </div>
+                {% endfor %}
+              </div>
+              <div class="col">
+                <div class="row g-0 gap-3 justify-content-center">
+                  {% assign count = 0 %}
+                  {% for block in section.blocks  %}
+                    {% case block.type %}
+                      {% when "HeaderBlock" %}
+                        {% if link.title == block.settings.for-link-title %}
+                          {% assign count = count | plus:1 %}
+                          {% if count <= 4 %}
+                            <div class="dropdown-image col p-3">
+                              <div>
+                                <img src="{{ block.settings.block_image | image_url }}" alt="Lamp Set">
+                              </div>
+                              <a href="/table-lamps-sets">{{ block.settings.url_text}}</a>
+                            </div>  
+                          {% endif %}
+                        {% endif %}
+                    {% endcase %}
+                  {% endfor %}
+                  </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        {% endif %}
+      </div>
+    {% endfor %}
+  </div>
+
+  <!-- Icons Section -->
+  <div class="icon">
+    <a href=""><i class='bx bx-search-alt-2'></i></a>
+    <a href=""><i class='bx bx-user-circle'></i></a>
+    <a href=""><i class='bx bx-cart-alt'></i></a>
+  </div>
+</header>           
+</section>
+<script>
+  
+  (()=>{
+  const elements = document.querySelectorAll('*');
+  // Filter elements that have a class matching the pattern
+  const filteredElements = Array.from(elements).filter(element => {
+    return element.className.match(/.*-\[\w+\]/); // Regex for matching class names like left-[30px]
+  });
+  filteredElements.forEach((item) => {
+    for (let i of item.classList) {
+      const match = i.match(/^([a-z-]+)-\[(.+)\]$/);
+      if (match) {
+        const property = match[1]; // Extract the property
+        const value = match[2];    // Extract the valu
+        item.style[property] = value;
+      }
+    }
+  });
+})();
+(()=>{
+    document.querySelector("#sidebar-open").addEventListener('click',()=>{
+      window.screen.availWidth >= 500?
+      document.querySelector('.sidebar-items').style.animationName="example":
+      document.querySelector('.sidebar-items').style.animationName="example-small"
+      document.querySelector('.container').style.animationName="asd";
+      document.querySelector("#sidebar").style.display="flex";
+      document.body.style.overflow="hidden";
+      document.querySelector(".container").style.display="flex";
+      document.querySelector(".head a").style.display="block";
+      document.querySelector(".head i").style.display="none";
+  });
+  document.querySelector("#sidebar-close").addEventListener('click',()=>{
+      document.querySelector('.sidebar-items').style.animationName="example-close";
+      document.body.style.overflow="auto";
+      document.querySelectorAll(".container-item").forEach((item)=>{
+        item.style.display="none";
+      });
+
+      setTimeout(()=>{
+          document.querySelector("#sidebar").style.display="none";
+      },500);
+  })
+
+  var openBox = '';
+  document.querySelector("#revers").addEventListener("click",()=>{
+
+    document.querySelector(".head a").style.display="block";
+    document.querySelector(".head i").style.display="none";
+    document.querySelector(".container").style.display="flex";
+    document.querySelector("#"+openBox).style.display="none";
+  });
+  document.querySelectorAll(".container .sidebar-item").forEach((item) => {
+    item.addEventListener("click", () => {
+      document.querySelector('.container').style.animationName="rev-container";
+      document.querySelector("#"+item.getAttribute('data-for')).style.display="flex";
+      openBox = item.getAttribute('data-for');
+      document.querySelector(".container").style.display="none";
+      document.querySelector(".head a").style.display="none";
+      document.querySelector(".head i").style.display="block";
+
+    });
+  });
+  document.querySelectorAll(".links").forEach((el)=>{
+    el.addEventListener("click",(e)=>{
+      el.children[0].classList.toggle("dd-link-open");
+      if(el.children[1].style.display!="flex"){
+        el.children[1].style.display="flex";
+        setTimeout(()=>{
+          el.children[0].style.borderColor="#fd7e14";
+        },400);
+      }
+      else{
+        el.children[1].style.display="none";
+        el.children[0].style.borderColor="#000";
+      }
+    })
+  });;
+})();
+  
+</script>
+{% schema %}
+  {
+    "name": "NewHeader",
+    "blocks": [
+      {
+         "type": "HeaderBlock",
+        "name":"HeaderBlock",
+        "settings": [
+          {
+            "type": "image_picker",
+            "id": "block_image",
+            "label": "Select Black Image : "
+          },
+          {
+            "type": "text",
+            "id": "url_text",
+            "label": "Set Url Text :",
+          },
+          {
+            "type": "url",
+            "id": "block_url",
+            "label": "Redirect Url",
+          },
+          {
+            "type": "text",
+            "id": "for-link-title",
+            "label": "Megamenu Title",
+            
+
+          }
+        ]
+      }
+    ],
+    "settings": [
+      {
+        "type": "link_list",
+        "id": "MyMenu",
+        "label": "Select Menu"
+      },
+      {
+        "type": "image_picker",
+        "id": "logo",
+        "label": "Select Logo",
+      }
+    ],
+    "presets": [{
+      "name": "NewHeader"
+    }]
+  }
+{% endschema %}
